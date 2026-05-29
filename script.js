@@ -26,7 +26,8 @@ function show(i) {
   current = (i + cards.length) % cards.length;
   const card = cards[current];
   const img  = card.querySelector('img');
-  lbImg.src  = img.src;
+  // Grid uses thumbs/; lightbox loads the full-size version
+  lbImg.src  = img.src.replace('/thumbs/', '/');
   lbImg.alt  = img.alt;
   lbTitle.textContent = card.dataset.title || '';
   lbDesc.textContent  = card.dataset.desc  || '';
