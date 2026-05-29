@@ -92,7 +92,6 @@ body {
   text-transform: uppercase;
   color: var(--gray);
   margin-bottom: 1.5rem;
-  animation: fadeUp 0.9s ease both;
 }
 
 .hero h1 {
@@ -103,7 +102,6 @@ body {
   letter-spacing: -0.015em;
   color: var(--black);
   margin-bottom: 1.25rem;
-  animation: fadeUp 0.9s 0.1s ease both;
 }
 
 .hero h1 em {
@@ -116,7 +114,6 @@ body {
   font-weight: 300;
   color: var(--gray);
   margin-bottom: 2.5rem;
-  animation: fadeUp 0.9s 0.2s ease both;
 }
 
 .hero-cta {
@@ -130,17 +127,11 @@ body {
   letter-spacing: 0.04em;
   border-radius: 100px;
   transition: opacity 0.2s, transform 0.2s;
-  animation: fadeUp 0.9s 0.3s ease both;
 }
 
 .hero-cta:hover {
   opacity: 0.8;
   transform: scale(1.02);
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ── Gallery ───────────────────────────── */
