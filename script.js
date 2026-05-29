@@ -1,64 +1,54 @@
-const cards    = Array.from(document.querySelectorAll('.art-card'));
-const lightbox = document.getElementById('lightbox');
-const lbImg    = document.getElementById('lb-img');
-const lbClose  = document.getElementById('lb-close');
-const lbPrev   = document.getElementById('lb-prev');
-const lbNext   = document.getElementById('lb-next');
+// Scroll reveal
+const observer = new IntersectionObserver(
+  entries => entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  }),
+  { threshold: 0.1 }
+);
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Lightbox
+const cards   = Array.from(document.querySelectorAll('.art-card'));
+const lb      = document.getElementById('lightbox');
+const lbImg   = document.getElementById('lb-img');
+const lbClose = document.getElementById('lb-close');
+const lbPrev  = document.getElementById('lb-prev');
+const lbNext  = document.getElementById('lb-next');
 
 let current = 0;
 
-function visibleCards() {
-  return cards.filter(c => {
-    const img = c.querySelector('img');
-    return img && !c.querySelector('.img-wrap').classList.contains('placeholder');
-  });
-}
-
-function openLightbox(index) {
-  const visible = visibleCards();
-  if (!visible.length) return;
-  current = index;
-  const img = visible[current].querySelector('img');
-  lbImg.src = img.src;
-  lbImg.alt = img.alt;
-  lightbox.classList.add('open');
+function open(i) {
+  current = i;
+  lbImg.src = cards[i].querySelector('img').src;
+  lbImg.alt = cards[i].querySelector('img').alt;
+  lb.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
-function closeLightbox() {
-  lightbox.classList.remove('open');
+function close() {
+  lb.classList.remove('open');
   lbImg.src = '';
   document.body.style.overflow = '';
 }
 
-function navigate(dir) {
-  const visible = visibleCards();
-  if (!visible.length) return;
-  current = (current + dir + visible.length) % visible.length;
-  const img = visible[current].querySelector('img');
-  lbImg.src = img.src;
-  lbImg.alt = img.alt;
+function nav(dir) {
+  current = (current + dir + cards.length) % cards.length;
+  lbImg.src = cards[current].querySelector('img').src;
+  lbImg.alt = cards[current].querySelector('img').alt;
 }
 
-cards.forEach((card, i) => {
-  card.addEventListener('click', () => {
-    const visible = visibleCards();
-    const idx = visible.indexOf(card);
-    if (idx !== -1) openLightbox(idx);
-  });
-});
-
-lbClose.addEventListener('click', closeLightbox);
-lbPrev.addEventListener('click', () => navigate(-1));
-lbNext.addEventListener('click', () => navigate(1));
-
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) closeLightbox();
-});
-
+cards.forEach((card, i) => card.addEventListener('click', () => open(i)));
+lbClose.addEventListener('click', close);
+lbPrev.addEventListener('click', () => nav(-1));
+lbNext.addEventListener('click', () => nav(1));
+lb.addEventListener('click', e => { if (e.target === lb) close(); });
 document.addEventListener('keydown', e => {
-  if (!lightbox.classList.contains('open')) return;
-  if (e.key === 'Escape')      closeLightbox();
-  if (e.key === 'ArrowLeft')   navigate(-1);
-  if (e.key === 'ArrowRight')  navigate(1);
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape')     close();
+  if (e.key === 'ArrowLeft')  nav(-1);
+  if (e.key === 'ArrowRight') nav(1);
 });

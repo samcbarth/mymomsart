@@ -4,43 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Basil Artwork</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header>
-    <nav>
+  <nav id="nav">
+    <span class="nav-logo">Basil Artwork</span>
+    <div class="nav-links">
       <a href="#gallery">Gallery</a>
       <a href="#about">About</a>
-      <a href="https://www.instagram.com/basilartwork" target="_blank" rel="noopener" class="nav-instagram">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @basilartwork
+      <a href="https://www.instagram.com/basilartwork" target="_blank" rel="noopener" class="nav-ig">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram
       </a>
-    </nav>
-    <div class="hero">
-      <h1>Basil Artwork</h1>
-      <p class="tagline">Original paintings &amp; illustrations</p>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Original paintings</p>
+      <h1>Art that<br><em>blooms</em></h1>
+      <p class="hero-sub">by Basil &mdash; abstract florals &amp; expressive works</p>
+      <a href="#gallery" class="hero-cta">View the collection</a>
+    </div>
+    <div class="hero-img-wrap reveal">
+      <img src="photos/artwork-1.jpg" alt="Abstract floral painting" />
     </div>
   </header>
 
   <main>
     <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="grid" id="artGrid">
+      <div class="section-label reveal">Gallery</div>
+      <div class="gallery-grid">
 
-        <figure class="art-card" data-index="0">
+        <figure class="art-card reveal" data-index="0">
           <div class="img-wrap">
             <img src="photos/artwork-1.jpg" alt="Abstract floral painting in red and green" loading="lazy" />
           </div>
         </figure>
 
-        <figure class="art-card" data-index="1">
+        <figure class="art-card reveal" data-index="1">
           <div class="img-wrap">
             <img src="photos/artwork-2.jpg" alt="Abstract painting with pink flowers and swirling lines" loading="lazy" />
           </div>
         </figure>
 
-        <figure class="art-card" data-index="2">
+        <figure class="art-card reveal" data-index="2">
           <div class="img-wrap">
             <img src="photos/artwork-3.jpg" alt="Abstract painting with blue daisy forms" loading="lazy" />
           </div>
@@ -48,29 +60,34 @@
 
       </div>
 
-      <div class="instagram-cta">
-        <p>See more on Instagram</p>
-        <a href="https://www.instagram.com/basilartwork" target="_blank" rel="noopener" class="btn-instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          @basilartwork
+      <div class="ig-cta reveal">
+        <a href="https://www.instagram.com/basilartwork" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          See more on Instagram
         </a>
       </div>
     </section>
 
     <section id="about">
       <div class="about-inner">
-        <h2>About the Artist</h2>
-        <p>Original artwork — paintings, illustrations, and more. Follow along on Instagram for the latest pieces.</p>
-        <a href="https://www.instagram.com/basilartwork" target="_blank" rel="noopener" class="btn-instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          Follow on Instagram
-        </a>
+        <div class="about-text reveal">
+          <div class="section-label">About</div>
+          <h2>Every piece<br>tells a story</h2>
+          <p>Original paintings, illustrations, and expressive works. Each canvas is a moment captured in colour and motion.</p>
+          <a href="https://www.instagram.com/basilartwork" target="_blank" rel="noopener" class="pill-btn">
+            Follow @basilartwork
+          </a>
+        </div>
+        <div class="about-img reveal">
+          <img src="photos/artwork-2.jpg" alt="Abstract painting detail" loading="lazy" />
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Basil Artwork &mdash; <a href="https://www.instagram.com/basilartwork" target="_blank" rel="noopener">@basilartwork</a></p>
+    <span>&copy; 2026 Basil Artwork</span>
+    <a href="https://www.instagram.com/basilartwork" target="_blank" rel="noopener">@basilartwork</a>
   </footer>
 
   <div id="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer">
