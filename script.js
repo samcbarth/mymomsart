@@ -1,3 +1,45 @@
+// ── Slideshow banner ────────────────────
+(function () {
+  const slides  = [document.getElementById('slide-a'), document.getElementById('slide-b')];
+  const sources = Array.from(document.querySelectorAll('.art-card img'))
+                       .map(img => img.src.replace('/thumbs/', '/'));
+
+  // Shuffle so it feels fresh each visit
+  for (let i = sources.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [sources[i], sources[j]] = [sources[j], sources[i]];
+  }
+
+  let idx    = 0;
+  let active = 0;
+
+  function preload(src, cb) {
+    const img = new Image();
+    img.onload = cb;
+    img.src    = src;
+  }
+
+  function showNext() {
+    const next    = 1 - active;
+    const nextIdx = (idx + 1) % sources.length;
+    slides[next].src = sources[nextIdx];
+    slides[next].onload = () => {
+      slides[next].classList.add('active');
+      slides[active].classList.remove('active');
+      active = next;
+      idx    = nextIdx;
+    };
+  }
+
+  // Load and show first image
+  preload(sources[0], () => {
+    slides[0].src = sources[0];
+    slides[0].classList.add('active');
+    setInterval(showNext, 4000);
+  });
+})();
+
+// ── Gallery + lightbox ──────────────────
 const cards    = Array.from(document.querySelectorAll('.art-card'));
 const lb       = document.getElementById('lightbox');
 const lbImg    = document.getElementById('lb-img');
