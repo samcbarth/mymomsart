@@ -159,6 +159,10 @@ body {
   animation: fadeInOut 9s ease-in-out infinite;
 }
 
+.hero-banner-img:nth-child(1) {
+  animation-delay: 0s;
+}
+
 .hero-banner-img:nth-child(2) {
   animation-delay: 3s;
 }
