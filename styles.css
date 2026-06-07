@@ -234,9 +234,13 @@ body {
 
 /* ── About ─────────────────────────────── */
 #about {
+  background: var(--light);
+  padding: 7rem 2rem;
+}
+
+.about-inner {
   max-width: 680px;
   margin: 0 auto;
-  padding: 7rem 2rem 7rem;
   text-align: center;
 }
 
@@ -489,12 +493,15 @@ footer a:hover { color: var(--black); }
 
 /* ── My Mom ────────────────────────────── */
 #my-mom {
+  padding: 7rem 2rem;
+}
+
+.mom-inner {
   display: flex;
   align-items: center;
   gap: 5rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 7rem 2rem;
 }
 
 .mom-photo {
@@ -588,17 +595,18 @@ footer a:hover { color: var(--black); }
     gap: 3px;
   }
 
-#gallery { padding: 3.5rem 1rem 3rem; }
-  #about   { padding: 5rem 1.25rem; }
-  footer   { padding: 1.25rem; flex-direction: column; gap: 0.4rem; text-align: center; }
+  #gallery     { padding: 3.5rem 1rem 3rem; }
+  #about       { padding: 5rem 1.25rem; }
+  #my-mom      { padding: 4.5rem 1.25rem; }
+  #studio-tour { padding: 4rem 1.25rem; }
+  footer       { padding: 1.25rem; flex-direction: column; gap: 0.4rem; text-align: center; }
 
   #lb-img  { max-height: 55vh; }
   #lb-prev, #lb-next { width: 36px; height: 36px; font-size: 0.95rem; }
 
-  #my-mom {
+  .mom-inner {
     flex-direction: column;
     gap: 2.5rem;
-    padding: 4.5rem 1.25rem;
   }
   .mom-photo {
     flex: none;
@@ -606,5 +614,4 @@ footer a:hover { color: var(--black); }
     max-width: 320px;
     margin: 0 auto;
   }
-  #studio-tour { padding: 4rem 1.25rem; }
 }
