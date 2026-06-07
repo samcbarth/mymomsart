@@ -487,6 +487,98 @@ footer a:hover { color: var(--black); }
   box-shadow: 0 4px 16px rgba(0,0,0,0.35);
 }
 
+/* ── My Mom ────────────────────────────── */
+#my-mom {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 7rem 2rem;
+}
+
+.mom-photo {
+  flex: 0 0 320px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.13);
+}
+
+.mom-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mom-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.mom-text p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.mom-text p:last-child { margin-bottom: 0; }
+
+/* ── Studio Tour ───────────────────────── */
+#studio-tour {
+  background: var(--black);
+  color: var(--white);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+#studio-tour .section-eyebrow {
+  color: rgba(255,255,255,0.45);
+}
+
+#studio-tour h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+#studio-tour p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  max-width: 540px;
+  margin: 0 auto 2.5rem;
+}
+
+.tour-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--white);
+  color: var(--black);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border-radius: 100px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.tour-btn:hover {
+  opacity: 0.88;
+  transform: scale(1.02);
+}
+
 /* ── Mobile ────────────────────────────── */
 @media (max-width: 700px) {
   #nav { padding: 0 1.25rem; }
@@ -502,4 +594,17 @@ footer a:hover { color: var(--black); }
 
   #lb-img  { max-height: 55vh; }
   #lb-prev, #lb-next { width: 36px; height: 36px; font-size: 0.95rem; }
+
+  #my-mom {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 4.5rem 1.25rem;
+  }
+  .mom-photo {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  #studio-tour { padding: 4rem 1.25rem; }
 }
