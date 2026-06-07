@@ -289,6 +289,33 @@ body {
   transform: scale(1.02);
 }
 
+/* ── Studio strip ──────────────────────── */
+.studio-strip {
+  overflow: hidden;
+  height: 180px;
+  background: var(--black);
+}
+
+.studio-strip-track {
+  display: flex;
+  gap: 3px;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.studio-strip-track img {
+  width: 177px;
+  height: 177px;
+  object-fit: cover;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 /* ── Footer ────────────────────────────── */
 footer {
   display: flex;
@@ -298,6 +325,12 @@ footer {
   border-top: 1px solid rgba(0,0,0,0.09);
   font-size: 0.82rem;
   color: var(--gray);
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 footer a {
