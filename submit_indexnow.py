@@ -15,7 +15,7 @@ Console. Everything else does.
 import argparse, json, pathlib, re, sys, urllib.request
 
 ROOT = pathlib.Path(__file__).parent
-HOST = "samcbarth.github.io"
+HOST = "art.samcbarth.com"
 ENDPOINT = "https://api.indexnow.org/IndexNow"
 
 
@@ -50,7 +50,7 @@ def main():
     payload = {
         "host": HOST,
         "key": key,
-        "keyLocation": f"https://{HOST}/mymomsart/{key}.txt",
+        "keyLocation": f"https://{HOST}/{key}.txt",
         "urlList": url_list,
     }
     req = urllib.request.Request(
