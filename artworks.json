@@ -70,7 +70,8 @@
       "year": 2023,
       "price": 975,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/00waEYexG7p26qV90mdby0f"
+      "checkoutUrl": "https://buy.stripe.com/00waEYexG7p26qV90mdby0f",
+      "printifyProductId": "6a951168059c0b0eca061e55"
     },
     {
       "index": 4,
@@ -96,7 +97,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a95117cecfa740f340f3955"
     },
     {
       "index": 6,
@@ -109,7 +111,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a95117f32321e27c00847cd"
     },
     {
       "index": 7,
@@ -122,7 +125,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a951183f2b671d79a0b7011"
     },
     {
       "index": 8,
@@ -135,7 +139,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a95118632321e27c00847d8"
     },
     {
       "index": 9,
@@ -148,7 +153,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a95118af83f5cb25c0bbca5"
     },
     {
       "index": 10,
@@ -161,7 +167,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a95118d686528ebe90f90cd"
     },
     {
       "index": 11,
@@ -173,7 +180,8 @@
       "year": 2024,
       "price": null,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "",
+      "printifyProductId": "6a95118f686528ebe90f90d5"
     },
     {
       "index": 12,
@@ -186,7 +194,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a951193f83f5cb25c0bbcb4"
     },
     {
       "index": 13,
@@ -199,7 +208,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a951196686528ebe90f90d9"
     },
     {
       "index": 14,
@@ -212,7 +222,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a951199059c0b0eca061e8e"
     },
     {
       "index": 15,
@@ -225,7 +236,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a95119c059c0b0eca061e90"
     },
     {
       "index": 17,
@@ -237,7 +249,8 @@
       "year": 2023,
       "price": 975,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/aFacN6gFOaBe5mR4K6dby0g"
+      "checkoutUrl": "https://buy.stripe.com/aFacN6gFOaBe5mR4K6dby0g",
+      "printifyProductId": "6a95119e32321e27c00847fa"
     },
     {
       "index": 18,
@@ -249,7 +262,8 @@
       "year": 2022,
       "price": 1575,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/dRmcN6fBK38M9D75Oadby0h"
+      "checkoutUrl": "https://buy.stripe.com/dRmcN6fBK38M9D75Oadby0h",
+      "printifyProductId": "6a9511a1f83f5cb25c0bbcc5"
     },
     {
       "index": 19,
@@ -261,7 +275,8 @@
       "year": 2023,
       "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/5kQ4gA75e8t602xekGdby0i"
+      "checkoutUrl": "https://buy.stripe.com/5kQ4gA75e8t602xekGdby0i",
+      "printifyProductId": "6a9511a4f2b671d79a0b703e"
     },
     {
       "index": 20,
@@ -273,7 +288,8 @@
       "year": 2023,
       "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/00wdRaahq8t64iNa4qdby0j"
+      "checkoutUrl": "https://buy.stripe.com/00wdRaahq8t64iNa4qdby0j",
+      "printifyProductId": "6a9511a6ecfa740f340f398e"
     },
     {
       "index": 21,
@@ -285,7 +301,8 @@
       "year": 2023,
       "price": 2925,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQ8t63eJa4qdby0k"
+      "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQ8t63eJa4qdby0k",
+      "printifyProductId": "6a9511a8f2b671d79a0b703f"
     },
     {
       "index": 22,
@@ -333,7 +350,8 @@
       "year": null,
       "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/4gM5kEahq7p2g1va4qdby0l"
+      "checkoutUrl": "https://buy.stripe.com/4gM5kEahq7p2g1va4qdby0l",
+      "printifyProductId": "6a9511ab059c0b0eca061eb0"
     },
     {
       "index": 26,
@@ -345,7 +363,8 @@
       "year": null,
       "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQeRu6qVdgCdby0m"
+      "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQeRu6qVdgCdby0m",
+      "printifyProductId": "6a9511adf2b671d79a0b704f"
     },
     {
       "index": 27,
@@ -357,7 +376,8 @@
       "year": null,
       "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/28E8wQblu38M16BfoKdby0n"
+      "checkoutUrl": "https://buy.stripe.com/28E8wQblu38M16BfoKdby0n",
+      "printifyProductId": "6a9511af686528ebe90f90ff"
     },
     {
       "index": 28,
@@ -369,7 +389,8 @@
       "year": 2023,
       "price": 975,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/9B6bJ2exG4cQ5mRb8udby0o"
+      "checkoutUrl": "https://buy.stripe.com/9B6bJ2exG4cQ5mRb8udby0o",
+      "printifyProductId": "6a9511b1059c0b0eca061ec2"
     },
     {
       "index": 29,
@@ -381,7 +402,8 @@
       "year": null,
       "price": null,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "",
+      "printifyProductId": "6a9511b3686528ebe90f9112"
     },
     {
       "index": 30,
@@ -393,7 +415,8 @@
       "year": null,
       "price": 2925,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/9B69AU89igZCg1vfoKdby0p"
+      "checkoutUrl": "https://buy.stripe.com/9B69AU89igZCg1vfoKdby0p",
+      "printifyProductId": "6a9511b6059c0b0eca061ece"
     },
     {
       "index": 31,
@@ -406,7 +429,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511b832321e27c0084837"
     },
     {
       "index": 32,
@@ -419,7 +443,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511bbf2b671d79a0b7075"
     },
     {
       "index": 33,
@@ -432,7 +457,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511bd059c0b0eca061ed7"
     },
     {
       "index": 34,
@@ -445,7 +471,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511bff83f5cb25c0bbcfc"
     },
     {
       "index": 35,
@@ -458,7 +485,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511c232321e27c008483e"
     },
     {
       "index": 36,
@@ -471,7 +499,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511c432321e27c008483f"
     },
     {
       "index": 37,
@@ -484,7 +513,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511c6059c0b0eca061ee0"
     },
     {
       "index": 38,
@@ -497,7 +527,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511c932321e27c0084841"
     },
     {
       "index": 39,
@@ -510,7 +541,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511cc32321e27c0084849"
     },
     {
       "index": 40,
@@ -523,7 +555,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511ce059c0b0eca061ee5"
     },
     {
       "index": 41,
@@ -536,7 +569,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511d1f2b671d79a0b7085"
     },
     {
       "index": 42,
@@ -549,7 +583,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511d3686528ebe90f912c"
     },
     {
       "index": 43,
@@ -562,7 +597,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "_todo": "needs real title, size and year from the artist",
+      "printifyProductId": "6a9511d5ecfa740f340f39c9"
     },
     {
       "index": 44,
@@ -600,7 +636,8 @@
       "year": null,
       "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/7sYbJ2gFO24IeXrdgCdby0q"
+      "checkoutUrl": "https://buy.stripe.com/7sYbJ2gFO24IeXrdgCdby0q",
+      "printifyProductId": "6a9511d832321e27c0084850"
     },
     {
       "index": 47,
@@ -612,7 +649,8 @@
       "year": 2023,
       "price": 1950,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/4gM8wQfBKdNqg1v6Sedby0r"
+      "checkoutUrl": "https://buy.stripe.com/4gM8wQfBKdNqg1v6Sedby0r",
+      "printifyProductId": "6a9511daf2b671d79a0b7098"
     },
     {
       "index": 48,
@@ -624,7 +662,8 @@
       "year": 2023,
       "price": 975,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/14AaEYexGeRudTn90mdby0s"
+      "checkoutUrl": "https://buy.stripe.com/14AaEYexGeRudTn90mdby0s",
+      "printifyProductId": "6a9511dcf2b671d79a0b709f"
     },
     {
       "index": 49,
@@ -636,7 +675,8 @@
       "year": 2023,
       "price": 1950,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/6oUfZifBK9xa4iN90mdby0t"
+      "checkoutUrl": "https://buy.stripe.com/6oUfZifBK9xa4iN90mdby0t",
+      "printifyProductId": "6a9511dfecfa740f340f39d7"
     }
   ]
 }
