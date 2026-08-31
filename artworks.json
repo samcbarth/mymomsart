@@ -9,15 +9,15 @@
     "site": "https://samcbarth.github.io/mymomsart/"
   },
   "pricing": {
-    "_method": "Flat rate card by canvas size so identical sizes always cost the same: 60x48 $1600, 48x36 $975, 40x30 $650, 30x30 $525, 20x26 $325.",
+    "_method": "Flat rate card by canvas size: 60x48 $4800, 48x36 $2925, 40x30 $1950, 30x30 $1575, 20x26 $975.",
     "printsEnabled": false,
     "_printsNote": "Originals photographed at ~2600x3500. Good for prints up to roughly 12x16 in at 300 DPI or 18x24 in at 150 DPI. Larger sizes need professional photography of the paintings.",
     "sizeTable": {
-      "60x48": 1600,
-      "48x36": 975,
-      "40x30": 650,
-      "30x30": 525,
-      "20x26": 325
+      "60x48": 4800,
+      "48x36": 2925,
+      "40x30": 1950,
+      "30x30": 1575,
+      "20x26": 975
     }
   },
   "works": [
@@ -68,9 +68,9 @@
       "width": 20,
       "height": 26,
       "year": 2023,
-      "price": 325,
+      "price": 975,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/4gM3cwgFObFidTnb8udby00"
+      "checkoutUrl": "https://buy.stripe.com/00waEYexG7p26qV90mdby0f"
     },
     {
       "index": 4,
@@ -235,9 +235,9 @@
       "width": 20,
       "height": 26,
       "year": 2023,
-      "price": 325,
+      "price": 975,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/14A5kEahq9xa8z3foKdby01"
+      "checkoutUrl": "https://buy.stripe.com/aFacN6gFOaBe5mR4K6dby0g"
     },
     {
       "index": 18,
@@ -247,9 +247,9 @@
       "width": 30,
       "height": 30,
       "year": 2022,
-      "price": 525,
+      "price": 1575,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/7sYeVe2OY38Mg1v2BYdby02"
+      "checkoutUrl": "https://buy.stripe.com/dRmcN6fBK38M9D75Oadby0h"
     },
     {
       "index": 19,
@@ -259,9 +259,9 @@
       "width": 60,
       "height": 48,
       "year": 2023,
-      "price": 1600,
+      "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/bJe5kE0GQ10EaHbekGdby03"
+      "checkoutUrl": "https://buy.stripe.com/5kQ4gA75e8t602xekGdby0i"
     },
     {
       "index": 20,
@@ -271,9 +271,9 @@
       "width": 60,
       "height": 48,
       "year": 2023,
-      "price": 1600,
+      "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/cNibJ2gFO7p26qVa4qdby04"
+      "checkoutUrl": "https://buy.stripe.com/00wdRaahq8t64iNa4qdby0j"
     },
     {
       "index": 21,
@@ -283,9 +283,9 @@
       "width": 48,
       "height": 36,
       "year": 2023,
-      "price": 975,
+      "price": 2925,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/8x228sahq7p25mR4K6dby05"
+      "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQ8t63eJa4qdby0k"
     },
     {
       "index": 22,
@@ -331,9 +331,9 @@
       "width": 60,
       "height": 48,
       "year": null,
-      "price": 1600,
+      "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/eVq14oexG8t67uZdgCdby06"
+      "checkoutUrl": "https://buy.stripe.com/4gM5kEahq7p2g1va4qdby0l"
     },
     {
       "index": 26,
@@ -343,9 +343,9 @@
       "width": 60,
       "height": 48,
       "year": null,
-      "price": 1600,
+      "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/3cI14o4X66kY6qV7Widby07"
+      "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQeRu6qVdgCdby0m"
     },
     {
       "index": 27,
@@ -355,9 +355,9 @@
       "width": 60,
       "height": 48,
       "year": null,
-      "price": 1600,
+      "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/fZu4gAahq8t68z37Widby08"
+      "checkoutUrl": "https://buy.stripe.com/28E8wQblu38M16BfoKdby0n"
     },
     {
       "index": 28,
@@ -367,9 +367,9 @@
       "width": 20,
       "height": 26,
       "year": 2023,
-      "price": 325,
+      "price": 975,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/9B6cN661a5gU8z3foKdby09"
+      "checkoutUrl": "https://buy.stripe.com/9B6bJ2exG4cQ5mRb8udby0o"
     },
     {
       "index": 29,
@@ -391,9 +391,9 @@
       "width": 48,
       "height": 36,
       "year": null,
-      "price": 975,
+      "price": 2925,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/5kQbJ2dtC9xacPj3G2dby0a"
+      "checkoutUrl": "https://buy.stripe.com/9B69AU89igZCg1vfoKdby0p"
     },
     {
       "index": 31,
@@ -598,9 +598,9 @@
       "width": 60,
       "height": 48,
       "year": null,
-      "price": 1600,
+      "price": 4800,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/7sY3cwdtCbFibLf90mdby0b"
+      "checkoutUrl": "https://buy.stripe.com/7sYbJ2gFO24IeXrdgCdby0q"
     },
     {
       "index": 47,
@@ -610,9 +610,9 @@
       "width": 40,
       "height": 30,
       "year": 2023,
-      "price": 650,
+      "price": 1950,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/8x214o3T224Ig1v1xUdby0c"
+      "checkoutUrl": "https://buy.stripe.com/4gM8wQfBKdNqg1v6Sedby0r"
     },
     {
       "index": 48,
@@ -622,9 +622,9 @@
       "width": 20,
       "height": 26,
       "year": 2023,
-      "price": 325,
+      "price": 975,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/5kQbJ22OY7p2bLf4K6dby0d"
+      "checkoutUrl": "https://buy.stripe.com/14AaEYexGeRudTn90mdby0s"
     },
     {
       "index": 49,
@@ -634,9 +634,9 @@
       "width": 40,
       "height": 30,
       "year": 2023,
-      "price": 650,
+      "price": 1950,
       "status": "available",
-      "checkoutUrl": "https://buy.stripe.com/dRm14o4X6aBeeXr7Widby0e"
+      "checkoutUrl": "https://buy.stripe.com/6oUfZifBK9xa4iN90mdby0t"
     }
   ]
 }

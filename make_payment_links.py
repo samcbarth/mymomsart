@@ -49,6 +49,10 @@ def shipping_countries():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument(
+        "--reprice", action="store_true",
+        help="deactivate every existing link and rebuild at current catalogue prices",
+    )
     args = ap.parse_args()
 
     key = os.environ.get("STRIPE_SECRET_KEY", "").strip()
@@ -66,6 +70,23 @@ def main():
 
     cat = json.loads(CATALOG.read_text(encoding="utf-8"))
     base = cat["artist"]["site"].rstrip("/")
+
+    if args.reprice and not args.dry_run:
+        # A Payment Link has its price fixed at creation. Editing the catalogue
+        # does nothing to a link already out in the world, so the old ones must
+        # be switched off or the painting stays buyable at the old price.
+        killed = 0
+        resp = call("payment_links?limit=100", key)
+        for link in resp.get("data", []):
+            if not link.get("active"):
+                continue
+            if link.get("metadata", {}).get("slug"):
+                call(f'payment_links/{link["id"]}', key, {"active": "false"})
+                killed += 1
+        print(f"deactivated {killed} existing payment links")
+        for w in cat["works"]:
+            w["checkoutUrl"] = ""
+        CATALOG.write_text(json.dumps(cat, indent=2, ensure_ascii=False), encoding="utf-8")
 
     todo = [
         w for w in cat["works"]
@@ -99,7 +120,7 @@ def main():
             "product": product["id"],
             "currency": "usd",
             "unit_amount": w["price"] * 100,
-        }, idempotency=f'basil-price-{w["slug"]}')
+        }, idempotency=f'basil-price-{w["slug"]}-{w["price"]}')
 
         link_data = {
             "line_items[0][price]": price["id"],
@@ -113,7 +134,7 @@ def main():
             "phone_number_collection[enabled]": "true",
             "metadata[slug]": w["slug"],
         }
-        link = call("payment_links", key, link_data, idempotency=f'basil-link-{w["slug"]}')
+        link = call("payment_links", key, link_data, idempotency=f'basil-link-{w["slug"]}-{w["price"]}')
 
         w["checkoutUrl"] = link["url"]
         print(f'  ${w["price"]:>5,}  {w["title"]:<28} {link["url"]}')
