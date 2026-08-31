@@ -1019,3 +1019,9 @@ footer a:hover { color: var(--black); }
   color: var(--gray);
   margin-bottom: 1.9rem;
 }
+
+.art-blurb--process {
+  font-size: 0.85rem;
+  color: var(--gray);
+  opacity: 0.85;
+}

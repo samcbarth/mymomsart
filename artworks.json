@@ -23,8 +23,8 @@
   "works": [
     {
       "index": 0,
-      "slug": "untitled-1",
-      "title": "Untitled No. 1",
+      "slug": "poppy-field",
+      "title": "Poppy Field",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -32,12 +32,13 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "note": "Reds pushed through a field of loose green strokes, like poppies seen at speed.",
+      "titleProvisional": true
     },
     {
       "index": 1,
-      "slug": "untitled-2",
-      "title": "Untitled No. 2",
+      "slug": "ink-and-bloom",
+      "title": "Ink and Bloom",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -45,12 +46,13 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "note": "A single pink bloom held inside a cage of black ink scribble.",
+      "titleProvisional": true
     },
     {
       "index": 2,
-      "slug": "untitled-3",
-      "title": "Untitled No. 3",
+      "slug": "silver-garden",
+      "title": "Silver Garden",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -58,7 +60,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "note": "Flowers worked almost entirely in silver and grey, the colour drained out on purpose.",
+      "titleProvisional": true
     },
     {
       "index": 3,
@@ -72,12 +75,13 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/00waEYexG7p26qV90mdby0f",
       "printifyProductId": "6a951168059c0b0eca061e55",
-      "printUrl": "https://my-moms-art.printify.me/product/31483667"
+      "printUrl": "https://my-moms-art.printify.me/product/31483667",
+      "note": "Four fish-like forms breaking the surface, drawn in quick dark strokes."
     },
     {
       "index": 4,
-      "slug": "untitled-5",
-      "title": "Untitled No. 5",
+      "slug": "peony-lace",
+      "title": "Peony Lace",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -85,12 +89,13 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "note": "Heavy pink peonies sitting over a pale ground patterned like lace.",
+      "titleProvisional": true
     },
     {
       "index": 5,
-      "slug": "untitled-6",
-      "title": "Untitled No. 6",
+      "slug": "midnight-bouquet",
+      "title": "Midnight Bouquet",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -98,14 +103,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a95117cecfa740f340f3955",
-      "printUrl": "https://my-moms-art.printify.me/product/31483668"
+      "printUrl": "https://my-moms-art.printify.me/product/31483668",
+      "note": "Blues and violets crowded into a dark vase, the whole thing lit from somewhere behind.",
+      "titleProvisional": true
     },
     {
       "index": 6,
-      "slug": "untitled-7",
-      "title": "Untitled No. 7",
+      "slug": "roses-in-blue",
+      "title": "Roses in Blue",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -113,14 +119,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a95117f32321e27c00847cd",
-      "printUrl": "https://my-moms-art.printify.me/product/31483670"
+      "printUrl": "https://my-moms-art.printify.me/product/31483670",
+      "note": "Thickly painted roses in a blue glass vase, the paint left standing off the canvas.",
+      "titleProvisional": true
     },
     {
       "index": 7,
-      "slug": "untitled-8",
-      "title": "Untitled No. 8",
+      "slug": "bottle-garden",
+      "title": "Bottle Garden",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -128,14 +135,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a951183f2b671d79a0b7011",
-      "printUrl": "https://my-moms-art.printify.me/product/31483672"
+      "printUrl": "https://my-moms-art.printify.me/product/31483672",
+      "note": "Pink blooms standing in a row of green bottles against flat teal.",
+      "titleProvisional": true
     },
     {
       "index": 8,
-      "slug": "untitled-9",
-      "title": "Untitled No. 9",
+      "slug": "two-daisies",
+      "title": "Two Daisies",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -143,14 +151,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a95118632321e27c00847d8",
-      "printUrl": "https://my-moms-art.printify.me/product/31483674"
+      "printUrl": "https://my-moms-art.printify.me/product/31483674",
+      "note": "Two daisies drawn over a soft, scrubbed-back abstract ground.",
+      "titleProvisional": true
     },
     {
       "index": 9,
-      "slug": "untitled-10",
-      "title": "Untitled No. 10",
+      "slug": "written-in-colour",
+      "title": "Written in Colour",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -158,14 +167,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a95118af83f5cb25c0bbca5",
-      "printUrl": "https://my-moms-art.printify.me/product/31483675"
+      "printUrl": "https://my-moms-art.printify.me/product/31483675",
+      "note": "Blocks of pink, blue and citron with handwriting running through them.",
+      "titleProvisional": true
     },
     {
       "index": 10,
-      "slug": "untitled-11",
-      "title": "Untitled No. 11",
+      "slug": "scatter",
+      "title": "Scatter",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -173,9 +183,10 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a95118d686528ebe90f90cd",
-      "printUrl": "https://my-moms-art.printify.me/product/31483677"
+      "printUrl": "https://my-moms-art.printify.me/product/31483677",
+      "note": "Loose watercolour marks scattered across the sheet, barely resolving into flowers.",
+      "titleProvisional": true
     },
     {
       "index": 11,
@@ -189,12 +200,13 @@
       "status": "available",
       "checkoutUrl": "",
       "printifyProductId": "6a95118f686528ebe90f90d5",
-      "printUrl": "https://my-moms-art.printify.me/product/31483678"
+      "printUrl": "https://my-moms-art.printify.me/product/31483678",
+      "note": "Winged shapes lifting off a pale, washed ground."
     },
     {
       "index": 12,
-      "slug": "untitled-13",
-      "title": "Untitled No. 13",
+      "slug": "magenta-study-i",
+      "title": "Magenta Study I",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -202,14 +214,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a951193f83f5cb25c0bbcb4",
-      "printUrl": "https://my-moms-art.printify.me/product/31483679"
+      "printUrl": "https://my-moms-art.printify.me/product/31483679",
+      "note": "A single magenta bloom on white, drawn in one confident pass.",
+      "titleProvisional": true
     },
     {
       "index": 13,
-      "slug": "untitled-14",
-      "title": "Untitled No. 14",
+      "slug": "magenta-study-ii",
+      "title": "Magenta Study II",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -217,14 +230,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a951196686528ebe90f90d9",
-      "printUrl": "https://my-moms-art.printify.me/product/31483680"
+      "printUrl": "https://my-moms-art.printify.me/product/31483680",
+      "note": "The same bloom opened wider, petals falling away from the stem.",
+      "titleProvisional": true
     },
     {
       "index": 14,
-      "slug": "untitled-15",
-      "title": "Untitled No. 15",
+      "slug": "magenta-study-iii",
+      "title": "Magenta Study III",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -232,14 +246,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a951199059c0b0eca061e8e",
-      "printUrl": "https://my-moms-art.printify.me/product/31483681"
+      "printUrl": "https://my-moms-art.printify.me/product/31483681",
+      "note": "The third of the series, looser again, with fine ink lines trailing off.",
+      "titleProvisional": true
     },
     {
       "index": 15,
-      "slug": "untitled-16",
-      "title": "Untitled No. 16",
+      "slug": "firework",
+      "title": "Firework",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -247,9 +262,10 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a95119c059c0b0eca061e90",
-      "printUrl": "https://my-moms-art.printify.me/product/31483682"
+      "printUrl": "https://my-moms-art.printify.me/product/31483682",
+      "note": "Blue and crimson thrown outward from the centre, caught mid-burst.",
+      "titleProvisional": true
     },
     {
       "index": 17,
@@ -263,7 +279,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/aFacN6gFOaBe5mR4K6dby0g",
       "printifyProductId": "6a95119e32321e27c00847fa",
-      "printUrl": "https://my-moms-art.printify.me/product/31483685"
+      "printUrl": "https://my-moms-art.printify.me/product/31483685",
+      "note": "A single form rising out of the water, alone on the sheet."
     },
     {
       "index": 18,
@@ -277,7 +294,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/dRmcN6fBK38M9D75Oadby0h",
       "printifyProductId": "6a9511a1f83f5cb25c0bbcc5",
-      "printUrl": "https://my-moms-art.printify.me/product/31483686"
+      "printUrl": "https://my-moms-art.printify.me/product/31483686",
+      "note": "One daisy, quiet and centred, on a square canvas."
     },
     {
       "index": 19,
@@ -291,7 +309,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/5kQ4gA75e8t602xekGdby0i",
       "printifyProductId": "6a9511a4f2b671d79a0b703e",
-      "printUrl": "https://my-moms-art.printify.me/product/31483656"
+      "printUrl": "https://my-moms-art.printify.me/product/31483656",
+      "note": "A butterfly held in a burst of colour that spreads to every edge."
     },
     {
       "index": 20,
@@ -305,7 +324,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/00wdRaahq8t64iNa4qdby0j",
       "printifyProductId": "6a9511a6ecfa740f340f398e",
-      "printUrl": "https://my-moms-art.printify.me/product/31483689"
+      "printUrl": "https://my-moms-art.printify.me/product/31483689",
+      "note": "A garden read as pure colour, dense and warm across five feet of canvas."
     },
     {
       "index": 21,
@@ -319,7 +339,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQ8t63eJa4qdby0k",
       "printifyProductId": "6a9511a8f2b671d79a0b703f",
-      "printUrl": "https://my-moms-art.printify.me/product/31483690"
+      "printUrl": "https://my-moms-art.printify.me/product/31483690",
+      "note": "Colour thrown hard across the canvas with words written into the paint."
     },
     {
       "index": 22,
@@ -331,7 +352,8 @@
       "year": null,
       "price": null,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "",
+      "note": "The artist's signature, worked as a painting in its own right."
     },
     {
       "index": 23,
@@ -343,7 +365,8 @@
       "year": null,
       "price": null,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "",
+      "note": "A second take on the signature, looser than the first."
     },
     {
       "index": 24,
@@ -355,7 +378,8 @@
       "year": null,
       "price": null,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "",
+      "note": "The third signature study, reduced to its essential line."
     },
     {
       "index": 25,
@@ -369,7 +393,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/4gM5kEahq7p2g1va4qdby0l",
       "printifyProductId": "6a9511ab059c0b0eca061eb0",
-      "printUrl": "https://my-moms-art.printify.me/product/31483691"
+      "printUrl": "https://my-moms-art.printify.me/product/31483691",
+      "note": "A garden that stays half hidden, blues and greens closing over it."
     },
     {
       "index": 26,
@@ -383,7 +408,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQeRu6qVdgCdby0m",
       "printifyProductId": "6a9511adf2b671d79a0b704f",
-      "printUrl": "https://my-moms-art.printify.me/product/31483692"
+      "printUrl": "https://my-moms-art.printify.me/product/31483692",
+      "note": "A winged form breaking upward across a large canvas."
     },
     {
       "index": 27,
@@ -397,7 +423,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/28E8wQblu38M16BfoKdby0n",
       "printifyProductId": "6a9511af686528ebe90f90ff",
-      "printUrl": "https://my-moms-art.printify.me/product/31483694"
+      "printUrl": "https://my-moms-art.printify.me/product/31483694",
+      "note": "Shapes caught in flight, pale and weightless."
     },
     {
       "index": 28,
@@ -411,7 +438,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/9B6bJ2exG4cQ5mRb8udby0o",
       "printifyProductId": "6a9511b1059c0b0eca061ec2",
-      "printUrl": "https://my-moms-art.printify.me/product/31483695"
+      "printUrl": "https://my-moms-art.printify.me/product/31483695",
+      "note": "The third of the water series, the form nearly clear of the surface."
     },
     {
       "index": 29,
@@ -425,7 +453,8 @@
       "status": "available",
       "checkoutUrl": "",
       "printifyProductId": "6a9511b3686528ebe90f9112",
-      "printUrl": "https://my-moms-art.printify.me/product/31483696"
+      "printUrl": "https://my-moms-art.printify.me/product/31483696",
+      "note": "A second flight study, the movement carried further."
     },
     {
       "index": 30,
@@ -439,12 +468,13 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/9B69AU89igZCg1vfoKdby0p",
       "printifyProductId": "6a9511b6059c0b0eca061ece",
-      "printUrl": "https://my-moms-art.printify.me/product/31483698"
+      "printUrl": "https://my-moms-art.printify.me/product/31483698",
+      "note": "A face suggested rather than drawn, built from colour alone."
     },
     {
       "index": 31,
-      "slug": "untitled-32",
-      "title": "Untitled No. 32",
+      "slug": "undergrowth",
+      "title": "Undergrowth",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -452,14 +482,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511b832321e27c0084837",
-      "printUrl": "https://my-moms-art.printify.me/product/31483700"
+      "printUrl": "https://my-moms-art.printify.me/product/31483700",
+      "note": "Dark layered marks with a grid pressed into them, flowers half buried underneath.",
+      "titleProvisional": true
     },
     {
       "index": 32,
-      "slug": "untitled-33",
-      "title": "Untitled No. 33",
+      "slug": "love-note",
+      "title": "Love Note",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -467,14 +498,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511bbf2b671d79a0b7075",
-      "printUrl": "https://my-moms-art.printify.me/product/31483701"
+      "printUrl": "https://my-moms-art.printify.me/product/31483701",
+      "note": "A pink rose on a curling green stem, with handwriting looping along the bottom.",
+      "titleProvisional": true
     },
     {
       "index": 33,
-      "slug": "untitled-34",
-      "title": "Untitled No. 34",
+      "slug": "lotus-letter",
+      "title": "Lotus Letter",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -482,14 +514,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511bd059c0b0eca061ed7",
-      "printUrl": "https://my-moms-art.printify.me/product/31483702"
+      "printUrl": "https://my-moms-art.printify.me/product/31483702",
+      "note": "An open lotus above a line of green script.",
+      "titleProvisional": true
     },
     {
       "index": 34,
-      "slug": "untitled-35",
-      "title": "Untitled No. 35",
+      "slug": "blue-room",
+      "title": "Blue Room",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -497,14 +530,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511bff83f5cb25c0bbcfc",
-      "printUrl": "https://my-moms-art.printify.me/product/31483703"
+      "printUrl": "https://my-moms-art.printify.me/product/31483703",
+      "note": "Flowers in a striped vase against deep blue, with small bubbles floating through it.",
+      "titleProvisional": true
     },
     {
       "index": 35,
-      "slug": "untitled-36",
-      "title": "Untitled No. 36",
+      "slug": "abundance",
+      "title": "Abundance",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -512,14 +546,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511c232321e27c008483e",
-      "printUrl": "https://my-moms-art.printify.me/product/31483704"
+      "printUrl": "https://my-moms-art.printify.me/product/31483704",
+      "note": "A teal vase packed past capacity with pink and crimson roses.",
+      "titleProvisional": true
     },
     {
       "index": 36,
-      "slug": "untitled-37",
-      "title": "Untitled No. 37",
+      "slug": "sea-bloom",
+      "title": "Sea Bloom",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -527,14 +562,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511c432321e27c008483f",
-      "printUrl": "https://my-moms-art.printify.me/product/31483705"
+      "printUrl": "https://my-moms-art.printify.me/product/31483705",
+      "note": "Teal and green poured wet, with pink pushing up through the middle.",
+      "titleProvisional": true
     },
     {
       "index": 37,
-      "slug": "untitled-38",
-      "title": "Untitled No. 38",
+      "slug": "tidewater",
+      "title": "Tidewater",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -542,14 +578,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511c6059c0b0eca061ee0",
-      "printUrl": "https://my-moms-art.printify.me/product/31483706"
+      "printUrl": "https://my-moms-art.printify.me/product/31483706",
+      "note": "Magenta running into blue-green, ink lines drawn over the pour.",
+      "titleProvisional": true
     },
     {
       "index": 38,
-      "slug": "untitled-39",
-      "title": "Untitled No. 39",
+      "slug": "crimson-burst",
+      "title": "Crimson Burst",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -557,14 +594,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511c932321e27c0084841",
-      "printUrl": "https://my-moms-art.printify.me/product/31483707"
+      "printUrl": "https://my-moms-art.printify.me/product/31483707",
+      "note": "Crimson and cobalt thrown out from a low centre.",
+      "titleProvisional": true
     },
     {
       "index": 39,
-      "slug": "untitled-40",
-      "title": "Untitled No. 40",
+      "slug": "purple-aster",
+      "title": "Purple Aster",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -572,14 +610,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511cc32321e27c0084849",
-      "printUrl": "https://my-moms-art.printify.me/product/31483708"
+      "printUrl": "https://my-moms-art.printify.me/product/31483708",
+      "note": "One purple aster on pale blue, handwriting across the top.",
+      "titleProvisional": true
     },
     {
       "index": 40,
-      "slug": "untitled-41",
-      "title": "Untitled No. 41",
+      "slug": "poppies-and-pearls",
+      "title": "Poppies and Pearls",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -587,14 +626,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511ce059c0b0eca061ee5",
-      "printUrl": "https://my-moms-art.printify.me/product/31483709"
+      "printUrl": "https://my-moms-art.printify.me/product/31483709",
+      "note": "Red poppies over soft green, with a band of small gold dots.",
+      "titleProvisional": true
     },
     {
       "index": 41,
-      "slug": "untitled-42",
-      "title": "Untitled No. 42",
+      "slug": "rose-lace",
+      "title": "Rose Lace",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -602,14 +642,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511d1f2b671d79a0b7085",
-      "printUrl": "https://my-moms-art.printify.me/product/31483711"
+      "printUrl": "https://my-moms-art.printify.me/product/31483711",
+      "note": "Pink and red roses massed over a patterned, lacy ground.",
+      "titleProvisional": true
     },
     {
       "index": 42,
-      "slug": "untitled-43",
-      "title": "Untitled No. 43",
+      "slug": "red-ribbons",
+      "title": "Red Ribbons",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -617,14 +658,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511d3686528ebe90f912c",
-      "printUrl": "https://my-moms-art.printify.me/product/31483712"
+      "printUrl": "https://my-moms-art.printify.me/product/31483712",
+      "note": "Red flowers drawn as loose ribbons over cream.",
+      "titleProvisional": true
     },
     {
       "index": 43,
-      "slug": "untitled-44",
-      "title": "Untitled No. 44",
+      "slug": "bottles-and-blooms",
+      "title": "Bottles and Blooms",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -632,14 +674,15 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist",
       "printifyProductId": "6a9511d5ecfa740f340f39c9",
-      "printUrl": "https://my-moms-art.printify.me/product/31483714"
+      "printUrl": "https://my-moms-art.printify.me/product/31483714",
+      "note": "Pink blooms above a shelf of teal bottles, drawn in outline.",
+      "titleProvisional": true
     },
     {
       "index": 44,
-      "slug": "untitled-45",
-      "title": "Untitled No. 45",
+      "slug": "ruby-bloom",
+      "title": "Ruby Bloom",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -647,12 +690,13 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "note": "Deep red flowers with green leaves swinging out to the edges.",
+      "titleProvisional": true
     },
     {
       "index": 45,
-      "slug": "untitled-46",
-      "title": "Untitled No. 46",
+      "slug": "deep-ruby",
+      "title": "Deep Ruby",
       "medium": "Acrylic on canvas",
       "width": null,
       "height": null,
@@ -660,7 +704,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "_todo": "needs real title, size and year from the artist"
+      "note": "A full red rose at the centre, surrounded by looser petals.",
+      "titleProvisional": true
     },
     {
       "index": 46,
@@ -674,7 +719,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/7sYbJ2gFO24IeXrdgCdby0q",
       "printifyProductId": "6a9511d832321e27c0084850",
-      "printUrl": "https://my-moms-art.printify.me/product/31483715"
+      "printUrl": "https://my-moms-art.printify.me/product/31483715",
+      "note": "A hibiscus opened against deep blue, five feet tall."
     },
     {
       "index": 47,
@@ -688,7 +734,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/4gM8wQfBKdNqg1v6Sedby0r",
       "printifyProductId": "6a9511daf2b671d79a0b7098",
-      "printUrl": "https://my-moms-art.printify.me/product/31483718"
+      "printUrl": "https://my-moms-art.printify.me/product/31483718",
+      "note": "Geraniums worked in reds and greens, close and full."
     },
     {
       "index": 48,
@@ -702,7 +749,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/14AaEYexGeRudTn90mdby0s",
       "printifyProductId": "6a9511dcf2b671d79a0b709f",
-      "printUrl": "https://my-moms-art.printify.me/product/31483720"
+      "printUrl": "https://my-moms-art.printify.me/product/31483720",
+      "note": "Two forms surfacing together, side by side."
     },
     {
       "index": 49,
@@ -716,7 +764,8 @@
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/6oUfZifBK9xa4iN90mdby0t",
       "printifyProductId": "6a9511dfecfa740f340f39d7",
-      "printUrl": "https://my-moms-art.printify.me/product/31483721"
+      "printUrl": "https://my-moms-art.printify.me/product/31483721",
+      "note": "Water lilies over blue-green depth, gold catching in the surface."
     }
   ]
 }

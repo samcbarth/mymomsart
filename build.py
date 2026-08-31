@@ -157,7 +157,8 @@ PAGE = """<!DOCTYPE html>
         <h1>{title}</h1>
         <p class="art-meta">{subtitle}</p>
         <p class="art-price">{price}</p>
-        <p class="art-blurb">{blurb}</p>
+        <p class="art-blurb">{note}</p>
+        <p class="art-blurb art-blurb--process">{blurb}</p>
         {cta}
         {print_cta}
         <p class="art-note">One of a kind. Signed by the artist. Ships from the North Dallas studio &mdash; local pickup and delivery welcome.</p>
@@ -197,7 +198,7 @@ def build_pages():
         desc = (
             f'{w["title"]} - original {w["medium"].lower()}'
             + (f', {d},' if d else "")
-            + f' by Dallas artist Lisa Barth. {price_label(w)}. One of a kind, available direct from the studio.'
+            + f' by Dallas artist Lisa Barth. {w.get("note", "")} {price_label(w)}.'
         )
         (out / f'{w["slug"]}.html').write_text(
             PAGE.format(
@@ -211,6 +212,7 @@ def build_pages():
                 cta=cta(w),
                 print_cta=print_cta(w),
                 blurb=BLURB,
+                note=w.get("note", ""),
                 ld=jsonld(w),
                 crumbs=breadcrumbs(w),
                 img_w=pixels(w["index"])[0],
@@ -308,7 +310,7 @@ SHOP = """<!DOCTYPE html>
   <header class="shop-hero">
     <p class="section-eyebrow">Available work</p>
     <h1>Take one home.</h1>
-    <p class="shop-hero-sub">Every painting here is an original &mdash; one of a kind, signed, and sold directly by the artist. Nothing is reproduced.</p>
+    <p class="shop-hero-sub">Every painting here is an original &mdash; one of a kind, signed, and sold directly by the artist. Most are also available as fine art prints.</p>
   </header>
 
   <main>
