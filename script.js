@@ -221,36 +221,46 @@ document.addEventListener('keydown', e => {
 });
 
 // ── Newsletter ──────────────────────────
-// Posts to data-endpoint when one is configured (Formspree / Buttondown / ConvertKit).
-// Until then it falls back to opening a pre-filled email so no signup is ever lost.
+// Posts straight to HubSpot's public form-submission endpoint rather than
+// using their embed script, which renders inside a cross-origin iframe that
+// the site's own styling cannot reach.
+const HS_PORTAL = '20693956';
+const HS_FORM   = '5c864270-e451-4943-91d6-4bfc6fae9513';
+
 const newsForm = document.getElementById('news-form');
 if (newsForm) {
   const note = document.getElementById('news-note');
   newsForm.addEventListener('submit', async e => {
     e.preventDefault();
-    const email    = newsForm.email.value.trim();
-    const endpoint = newsForm.dataset.endpoint;
+    const email = newsForm.email.value.trim();
     if (!email) return;
 
-    if (!endpoint) {
-      window.location.href =
-        `mailto:pljbarth@gmail.com?subject=Add%20me%20to%20the%20list&body=${encodeURIComponent(email)}`;
-      note.textContent = 'Thanks — send the email that just opened and you are on the list.';
-      return;
-    }
-
+    const btn = newsForm.querySelector('button');
+    btn.disabled = true;
     note.textContent = 'Adding you…';
+
     try {
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ email })
-      });
+      const res = await fetch(
+        `https://api.hsforms.com/submissions/v3/integration/submit/${HS_PORTAL}/${HS_FORM}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fields: [{ objectTypeId: '0-1', name: 'email', value: email }],
+            context: {
+              pageUri: window.location.href,
+              pageName: document.title
+            }
+          })
+        }
+      );
       if (!res.ok) throw new Error(res.status);
       newsForm.reset();
       note.textContent = 'You are on the list. Talk soon.';
     } catch {
       note.textContent = 'That did not go through — email pljbarth@gmail.com and we will add you.';
+    } finally {
+      btn.disabled = false;
     }
   });
 }

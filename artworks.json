@@ -9,9 +9,16 @@
     "site": "https://samcbarth.github.io/mymomsart/"
   },
   "pricing": {
-    "_method": "sq-in x $0.55, rounded. Emerging-artist market rate for original acrylic on canvas.",
+    "_method": "Flat rate card by canvas size so identical sizes always cost the same: 60x48 $1600, 48x36 $975, 40x30 $650, 30x30 $525, 20x26 $325.",
     "printsEnabled": false,
-    "_printsNote": "Originals photographed at ~2600x3500. Good for prints up to roughly 12x16 in at 300 DPI or 18x24 in at 150 DPI. Larger sizes need professional photography of the paintings."
+    "_printsNote": "Originals photographed at ~2600x3500. Good for prints up to roughly 12x16 in at 300 DPI or 18x24 in at 150 DPI. Larger sizes need professional photography of the paintings.",
+    "sizeTable": {
+      "60x48": 1600,
+      "48x36": 975,
+      "40x30": 650,
+      "30x30": 525,
+      "20x26": 325
+    }
   },
   "works": [
     {
@@ -591,7 +598,7 @@
       "width": 60,
       "height": 48,
       "year": null,
-      "price": 1575,
+      "price": 1600,
       "status": "available",
       "checkoutUrl": ""
     },
@@ -615,7 +622,7 @@
       "width": 20,
       "height": 26,
       "year": 2023,
-      "price": 275,
+      "price": 325,
       "status": "available",
       "checkoutUrl": ""
     },

@@ -854,6 +854,8 @@ footer a:hover { color: var(--black); }
   margin-bottom: 1.8rem;
 }
 
+/* HubSpot injects its own markup, so style by its classes. */
+#news-embed .hs-form,
 .news-form {
   display: flex;
   gap: 0.6rem;
@@ -902,4 +904,76 @@ footer a:hover { color: var(--black); }
   .art-detail { padding: 2rem 1.25rem 4rem; }
   .shop-grid-wrap { padding: 0 1.25rem 4rem; }
   .shop-grid { gap: 2rem 1.25rem; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}
+
+/* ── HubSpot embedded form ─────────────── */
+#news-embed { max-width: 420px; margin: 0 auto; }
+
+#news-embed .hs-form-field { margin-bottom: 0.75rem; text-align: left; }
+
+#news-embed label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--gray);
+  margin-bottom: 0.3rem;
+}
+
+#news-embed .hs-form-field > label > .hs-form-required { color: var(--accent); }
+
+#news-embed input[type="text"],
+#news-embed input[type="email"],
+#news-embed input[type="tel"],
+#news-embed textarea,
+#news-embed select {
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  background: var(--white);
+  color: var(--black);
+}
+
+#news-embed textarea { border-radius: 18px; min-height: 90px; }
+
+#news-embed input:focus,
+#news-embed textarea:focus,
+#news-embed select:focus {
+  outline: none;
+  border-color: var(--black);
+}
+
+#news-embed .hs-button {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.85rem 1.9rem;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+#news-embed .hs-button:hover { background: var(--accent); }
+
+#news-embed .hs-error-msg,
+#news-embed .hs-error-msgs label {
+  color: var(--accent);
+  font-size: 0.72rem;
+}
+
+#news-embed .submitted-message {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+#news-embed .hs-form-booleancheckbox label,
+#news-embed .legal-consent-container {
+  font-size: 0.7rem;
+  line-height: 1.6;
+  color: var(--gray);
 }
