@@ -10,12 +10,31 @@ Reads artworks.json (the single source of truth) and generates:
 Re-run after any edit to artworks.json:  python build.py
 """
 import json, html, pathlib
+from PIL import Image
 
 ROOT = pathlib.Path(__file__).parent
 CAT = json.loads((ROOT / "artworks.json").read_text(encoding="utf-8"))
 ARTIST = CAT["artist"]
 BASE = ARTIST["site"].rstrip("/")
 WORKS = CAT["works"]
+
+
+def pixels(index, thumb=False):
+    """Actual pixel size of an artwork file, for the img width/height attributes."""
+    sub = "thumbs/" if thumb else ""
+    return Image.open(ROOT / f"photos/{sub}artwork-{index + 1}.jpg").size
+
+
+def breadcrumbs(w):
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Basil Artwork", "item": BASE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Available work", "item": BASE + "/art/"},
+            {"@type": "ListItem", "position": 3, "name": w["title"]},
+        ],
+    }, indent=2)
 
 
 def dims(w):
@@ -103,6 +122,7 @@ PAGE = """<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
   <script type="application/ld+json">{ld}</script>
+  <script type="application/ld+json">{crumbs}</script>
 </head>
 <body class="art-page">
 
@@ -119,7 +139,7 @@ PAGE = """<!DOCTYPE html>
     <a class="art-back" href="index.html">&larr; All available work</a>
     <div class="art-detail-inner">
       <div class="art-detail-img">
-        <img src="../photos/artwork-{img}.jpg" alt="{title}, {subtitle_plain}, by Lisa Barth" />
+        <img src="../photos/artwork-{img}.jpg" width="{img_w}" height="{img_h}" alt="{title}, {subtitle_plain}, by Lisa Barth" />
       </div>
       <div class="art-detail-info">
         <p class="section-eyebrow">Original painting</p>
@@ -140,6 +160,10 @@ PAGE = """<!DOCTYPE html>
       <a href="{ig}" target="_blank" rel="noopener">@basilartwork</a>
     </div>
   </footer>
+
+  <!-- HubSpot tracking: page analytics, and ties form submissions to the
+       pages someone browsed before signing up. -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/20693956.js"></script>
 
 </body>
 </html>
@@ -175,6 +199,9 @@ def build_pages():
                 cta=cta(w),
                 blurb=BLURB,
                 ld=jsonld(w),
+                crumbs=breadcrumbs(w),
+                img_w=pixels(w["index"])[0],
+                img_h=pixels(w["index"])[1],
                 base=BASE,
                 email=ARTIST["email"],
                 ig=ARTIST["instagram"],
@@ -188,7 +215,7 @@ GALLERY_CARD = """        <figure class="art-card" data-index="{index}" data-slu
           data-title="{title}"
           data-desc="{subtitle}">
           <div class="img-wrap">
-            <img src="photos/thumbs/artwork-{img}.jpg" alt="{alt}" loading="lazy" />
+            <img src="photos/thumbs/artwork-{img}.jpg" width="{tw}" height="{th}" alt="{alt}" loading="lazy" />
           </div>
           <a class="card-price" href="art/{slug}.html">{price} &middot; view details</a>
         </figure>
@@ -211,6 +238,8 @@ def build_gallery():
             price=price_label(w),
             price_raw=w["price"] or "",
             status=w["status"],
+            tw=pixels(w["index"], thumb=True)[0],
+            th=pixels(w["index"], thumb=True)[1],
         )
         for w in WORKS
     )
@@ -225,7 +254,7 @@ def build_gallery():
 
 
 SHOP_CARD = """        <a class="shop-card{sold}" href="{slug}.html">
-          <div class="img-wrap"><img src="../photos/thumbs/artwork-{img}.jpg" alt="{title} by Lisa Barth" loading="lazy" /></div>
+          <div class="img-wrap"><img src="../photos/thumbs/artwork-{img}.jpg" width="{tw}" height="{th}" alt="{title} by Lisa Barth" loading="lazy" /></div>
           <div class="shop-card-info">
             <h3>{title}</h3>
             <p class="shop-card-meta">{subtitle}</p>
@@ -283,6 +312,10 @@ SHOP = """<!DOCTYPE html>
     </div>
   </footer>
 
+  <!-- HubSpot tracking: page analytics, and ties form submissions to the
+       pages someone browsed before signing up. -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/20693956.js"></script>
+
 </body>
 </html>
 """
@@ -297,6 +330,8 @@ def build_shop():
             subtitle=subtitle(w),
             price=price_label(w),
             sold=" shop-card--sold" if w["status"] == "sold" else "",
+            tw=pixels(w["index"], thumb=True)[0],
+            th=pixels(w["index"], thumb=True)[1],
         )
         for w in WORKS
     )
