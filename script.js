@@ -51,6 +51,8 @@ const lbPrev   = document.getElementById('lb-prev');
 const lbNext   = document.getElementById('lb-next');
 const lbLike   = document.getElementById('lb-like');
 const lbLabel  = document.getElementById('lb-like-label');
+const lbBuy    = document.getElementById('lb-contact');
+const lbBuyTxt = document.getElementById('lb-contact-label');
 
 let current = 0;
 const liked = new Set(JSON.parse(localStorage.getItem('liked') || '[]'));
@@ -171,6 +173,16 @@ function show(i) {
 
   lbTitle.textContent = card.dataset.title || '';
   lbDesc.textContent  = card.dataset.desc  || '';
+
+  // Point the lightbox CTA at this piece's own page.
+  const slug   = card.dataset.slug;
+  const price  = card.dataset.price;
+  const status = card.dataset.status;
+  lbBuy.href = slug ? `art/${slug}.html` : 'art/index.html';
+  if (status === 'sold')     lbBuyTxt.textContent = 'Sold — see available work';
+  else if (price)            lbBuyTxt.textContent = `$${Number(price).toLocaleString()} — view & purchase`;
+  else                       lbBuyTxt.textContent = 'Inquire about this piece';
+
   updateLikeBtn();
 }
 
@@ -192,7 +204,10 @@ lbLike.addEventListener('click', () => {
   saveLikes(); updateLikeBtn();
 });
 
-cards.forEach((c, i) => c.addEventListener('click', () => open(i)));
+cards.forEach((c, i) => c.addEventListener('click', e => {
+  if (e.target.closest('.card-price')) return;   // let the details link through
+  open(i);
+}));
 lbClose.addEventListener('click', close);
 lbPrev.addEventListener('click',  () => show(current - 1));
 lbNext.addEventListener('click',  () => show(current + 1));
@@ -204,3 +219,38 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft')  show(current - 1);
   if (e.key === 'ArrowRight') show(current + 1);
 });
+
+// ── Newsletter ──────────────────────────
+// Posts to data-endpoint when one is configured (Formspree / Buttondown / ConvertKit).
+// Until then it falls back to opening a pre-filled email so no signup is ever lost.
+const newsForm = document.getElementById('news-form');
+if (newsForm) {
+  const note = document.getElementById('news-note');
+  newsForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const email    = newsForm.email.value.trim();
+    const endpoint = newsForm.dataset.endpoint;
+    if (!email) return;
+
+    if (!endpoint) {
+      window.location.href =
+        `mailto:pljbarth@gmail.com?subject=Add%20me%20to%20the%20list&body=${encodeURIComponent(email)}`;
+      note.textContent = 'Thanks — send the email that just opened and you are on the list.';
+      return;
+    }
+
+    note.textContent = 'Adding you…';
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      if (!res.ok) throw new Error(res.status);
+      newsForm.reset();
+      note.textContent = 'You are on the list. Talk soon.';
+    } catch {
+      note.textContent = 'That did not go through — email pljbarth@gmail.com and we will add you.';
+    }
+  });
+}
