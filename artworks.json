@@ -71,7 +71,8 @@
       "price": 975,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/00waEYexG7p26qV90mdby0f",
-      "printifyProductId": "6a951168059c0b0eca061e55"
+      "printifyProductId": "6a951168059c0b0eca061e55",
+      "printUrl": "https://my-moms-art.printify.me/product/31483667"
     },
     {
       "index": 4,
@@ -98,7 +99,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a95117cecfa740f340f3955"
+      "printifyProductId": "6a95117cecfa740f340f3955",
+      "printUrl": "https://my-moms-art.printify.me/product/31483668"
     },
     {
       "index": 6,
@@ -112,7 +114,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a95117f32321e27c00847cd"
+      "printifyProductId": "6a95117f32321e27c00847cd",
+      "printUrl": "https://my-moms-art.printify.me/product/31483670"
     },
     {
       "index": 7,
@@ -126,7 +129,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a951183f2b671d79a0b7011"
+      "printifyProductId": "6a951183f2b671d79a0b7011",
+      "printUrl": "https://my-moms-art.printify.me/product/31483672"
     },
     {
       "index": 8,
@@ -140,7 +144,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a95118632321e27c00847d8"
+      "printifyProductId": "6a95118632321e27c00847d8",
+      "printUrl": "https://my-moms-art.printify.me/product/31483674"
     },
     {
       "index": 9,
@@ -154,7 +159,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a95118af83f5cb25c0bbca5"
+      "printifyProductId": "6a95118af83f5cb25c0bbca5",
+      "printUrl": "https://my-moms-art.printify.me/product/31483675"
     },
     {
       "index": 10,
@@ -168,7 +174,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a95118d686528ebe90f90cd"
+      "printifyProductId": "6a95118d686528ebe90f90cd",
+      "printUrl": "https://my-moms-art.printify.me/product/31483677"
     },
     {
       "index": 11,
@@ -181,7 +188,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "printifyProductId": "6a95118f686528ebe90f90d5"
+      "printifyProductId": "6a95118f686528ebe90f90d5",
+      "printUrl": "https://my-moms-art.printify.me/product/31483678"
     },
     {
       "index": 12,
@@ -195,7 +203,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a951193f83f5cb25c0bbcb4"
+      "printifyProductId": "6a951193f83f5cb25c0bbcb4",
+      "printUrl": "https://my-moms-art.printify.me/product/31483679"
     },
     {
       "index": 13,
@@ -209,7 +218,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a951196686528ebe90f90d9"
+      "printifyProductId": "6a951196686528ebe90f90d9",
+      "printUrl": "https://my-moms-art.printify.me/product/31483680"
     },
     {
       "index": 14,
@@ -223,7 +233,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a951199059c0b0eca061e8e"
+      "printifyProductId": "6a951199059c0b0eca061e8e",
+      "printUrl": "https://my-moms-art.printify.me/product/31483681"
     },
     {
       "index": 15,
@@ -237,7 +248,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a95119c059c0b0eca061e90"
+      "printifyProductId": "6a95119c059c0b0eca061e90",
+      "printUrl": "https://my-moms-art.printify.me/product/31483682"
     },
     {
       "index": 17,
@@ -250,7 +262,8 @@
       "price": 975,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/aFacN6gFOaBe5mR4K6dby0g",
-      "printifyProductId": "6a95119e32321e27c00847fa"
+      "printifyProductId": "6a95119e32321e27c00847fa",
+      "printUrl": "https://my-moms-art.printify.me/product/31483685"
     },
     {
       "index": 18,
@@ -263,7 +276,8 @@
       "price": 1575,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/dRmcN6fBK38M9D75Oadby0h",
-      "printifyProductId": "6a9511a1f83f5cb25c0bbcc5"
+      "printifyProductId": "6a9511a1f83f5cb25c0bbcc5",
+      "printUrl": "https://my-moms-art.printify.me/product/31483686"
     },
     {
       "index": 19,
@@ -276,7 +290,8 @@
       "price": 4800,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/5kQ4gA75e8t602xekGdby0i",
-      "printifyProductId": "6a9511a4f2b671d79a0b703e"
+      "printifyProductId": "6a9511a4f2b671d79a0b703e",
+      "printUrl": "https://my-moms-art.printify.me/product/31483656"
     },
     {
       "index": 20,
@@ -289,7 +304,8 @@
       "price": 4800,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/00wdRaahq8t64iNa4qdby0j",
-      "printifyProductId": "6a9511a6ecfa740f340f398e"
+      "printifyProductId": "6a9511a6ecfa740f340f398e",
+      "printUrl": "https://my-moms-art.printify.me/product/31483689"
     },
     {
       "index": 21,
@@ -302,7 +318,8 @@
       "price": 2925,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQ8t63eJa4qdby0k",
-      "printifyProductId": "6a9511a8f2b671d79a0b703f"
+      "printifyProductId": "6a9511a8f2b671d79a0b703f",
+      "printUrl": "https://my-moms-art.printify.me/product/31483690"
     },
     {
       "index": 22,
@@ -351,7 +368,8 @@
       "price": 4800,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/4gM5kEahq7p2g1va4qdby0l",
-      "printifyProductId": "6a9511ab059c0b0eca061eb0"
+      "printifyProductId": "6a9511ab059c0b0eca061eb0",
+      "printUrl": "https://my-moms-art.printify.me/product/31483691"
     },
     {
       "index": 26,
@@ -364,7 +382,8 @@
       "price": 4800,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/9B6aEY0GQeRu6qVdgCdby0m",
-      "printifyProductId": "6a9511adf2b671d79a0b704f"
+      "printifyProductId": "6a9511adf2b671d79a0b704f",
+      "printUrl": "https://my-moms-art.printify.me/product/31483692"
     },
     {
       "index": 27,
@@ -377,7 +396,8 @@
       "price": 4800,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/28E8wQblu38M16BfoKdby0n",
-      "printifyProductId": "6a9511af686528ebe90f90ff"
+      "printifyProductId": "6a9511af686528ebe90f90ff",
+      "printUrl": "https://my-moms-art.printify.me/product/31483694"
     },
     {
       "index": 28,
@@ -390,7 +410,8 @@
       "price": 975,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/9B6bJ2exG4cQ5mRb8udby0o",
-      "printifyProductId": "6a9511b1059c0b0eca061ec2"
+      "printifyProductId": "6a9511b1059c0b0eca061ec2",
+      "printUrl": "https://my-moms-art.printify.me/product/31483695"
     },
     {
       "index": 29,
@@ -403,7 +424,8 @@
       "price": null,
       "status": "available",
       "checkoutUrl": "",
-      "printifyProductId": "6a9511b3686528ebe90f9112"
+      "printifyProductId": "6a9511b3686528ebe90f9112",
+      "printUrl": "https://my-moms-art.printify.me/product/31483696"
     },
     {
       "index": 30,
@@ -416,7 +438,8 @@
       "price": 2925,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/9B69AU89igZCg1vfoKdby0p",
-      "printifyProductId": "6a9511b6059c0b0eca061ece"
+      "printifyProductId": "6a9511b6059c0b0eca061ece",
+      "printUrl": "https://my-moms-art.printify.me/product/31483698"
     },
     {
       "index": 31,
@@ -430,7 +453,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511b832321e27c0084837"
+      "printifyProductId": "6a9511b832321e27c0084837",
+      "printUrl": "https://my-moms-art.printify.me/product/31483700"
     },
     {
       "index": 32,
@@ -444,7 +468,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511bbf2b671d79a0b7075"
+      "printifyProductId": "6a9511bbf2b671d79a0b7075",
+      "printUrl": "https://my-moms-art.printify.me/product/31483701"
     },
     {
       "index": 33,
@@ -458,7 +483,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511bd059c0b0eca061ed7"
+      "printifyProductId": "6a9511bd059c0b0eca061ed7",
+      "printUrl": "https://my-moms-art.printify.me/product/31483702"
     },
     {
       "index": 34,
@@ -472,7 +498,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511bff83f5cb25c0bbcfc"
+      "printifyProductId": "6a9511bff83f5cb25c0bbcfc",
+      "printUrl": "https://my-moms-art.printify.me/product/31483703"
     },
     {
       "index": 35,
@@ -486,7 +513,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511c232321e27c008483e"
+      "printifyProductId": "6a9511c232321e27c008483e",
+      "printUrl": "https://my-moms-art.printify.me/product/31483704"
     },
     {
       "index": 36,
@@ -500,7 +528,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511c432321e27c008483f"
+      "printifyProductId": "6a9511c432321e27c008483f",
+      "printUrl": "https://my-moms-art.printify.me/product/31483705"
     },
     {
       "index": 37,
@@ -514,7 +543,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511c6059c0b0eca061ee0"
+      "printifyProductId": "6a9511c6059c0b0eca061ee0",
+      "printUrl": "https://my-moms-art.printify.me/product/31483706"
     },
     {
       "index": 38,
@@ -528,7 +558,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511c932321e27c0084841"
+      "printifyProductId": "6a9511c932321e27c0084841",
+      "printUrl": "https://my-moms-art.printify.me/product/31483707"
     },
     {
       "index": 39,
@@ -542,7 +573,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511cc32321e27c0084849"
+      "printifyProductId": "6a9511cc32321e27c0084849",
+      "printUrl": "https://my-moms-art.printify.me/product/31483708"
     },
     {
       "index": 40,
@@ -556,7 +588,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511ce059c0b0eca061ee5"
+      "printifyProductId": "6a9511ce059c0b0eca061ee5",
+      "printUrl": "https://my-moms-art.printify.me/product/31483709"
     },
     {
       "index": 41,
@@ -570,7 +603,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511d1f2b671d79a0b7085"
+      "printifyProductId": "6a9511d1f2b671d79a0b7085",
+      "printUrl": "https://my-moms-art.printify.me/product/31483711"
     },
     {
       "index": 42,
@@ -584,7 +618,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511d3686528ebe90f912c"
+      "printifyProductId": "6a9511d3686528ebe90f912c",
+      "printUrl": "https://my-moms-art.printify.me/product/31483712"
     },
     {
       "index": 43,
@@ -598,7 +633,8 @@
       "status": "available",
       "checkoutUrl": "",
       "_todo": "needs real title, size and year from the artist",
-      "printifyProductId": "6a9511d5ecfa740f340f39c9"
+      "printifyProductId": "6a9511d5ecfa740f340f39c9",
+      "printUrl": "https://my-moms-art.printify.me/product/31483714"
     },
     {
       "index": 44,
@@ -637,7 +673,8 @@
       "price": 4800,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/7sYbJ2gFO24IeXrdgCdby0q",
-      "printifyProductId": "6a9511d832321e27c0084850"
+      "printifyProductId": "6a9511d832321e27c0084850",
+      "printUrl": "https://my-moms-art.printify.me/product/31483715"
     },
     {
       "index": 47,
@@ -650,7 +687,8 @@
       "price": 1950,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/4gM8wQfBKdNqg1v6Sedby0r",
-      "printifyProductId": "6a9511daf2b671d79a0b7098"
+      "printifyProductId": "6a9511daf2b671d79a0b7098",
+      "printUrl": "https://my-moms-art.printify.me/product/31483718"
     },
     {
       "index": 48,
@@ -663,7 +701,8 @@
       "price": 975,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/14AaEYexGeRudTn90mdby0s",
-      "printifyProductId": "6a9511dcf2b671d79a0b709f"
+      "printifyProductId": "6a9511dcf2b671d79a0b709f",
+      "printUrl": "https://my-moms-art.printify.me/product/31483720"
     },
     {
       "index": 49,
@@ -676,7 +715,8 @@
       "price": 1950,
       "status": "available",
       "checkoutUrl": "https://buy.stripe.com/6oUfZifBK9xa4iN90mdby0t",
-      "printifyProductId": "6a9511dfecfa740f340f39d7"
+      "printifyProductId": "6a9511dfecfa740f340f39d7",
+      "printUrl": "https://my-moms-art.printify.me/product/31483721"
     }
   ]
 }

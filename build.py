@@ -56,6 +56,16 @@ def price_label(w):
     return "Price on request"
 
 
+def print_cta(w):
+    """Prints are the affordable way in; the original stays the headline."""
+    if not w.get("printUrl"):
+        return ""
+    return (
+        f'<a class="print-btn" href="{html.escape(w["printUrl"])}" target="_blank" rel="noopener">'
+        f"Or buy a fine art print &mdash; from $45</a>"
+    )
+
+
 def cta(w):
     """Buy button when a Stripe link exists, otherwise an inquiry mailto."""
     if w["status"] == "sold":
@@ -131,6 +141,7 @@ PAGE = """<!DOCTYPE html>
     <div class="nav-links">
       <a href="../index.html#gallery">Gallery</a>
       <a href="index.html">Collect</a>
+      <a href="https://my-moms-art.printify.me/" target="_blank" rel="noopener">Prints</a>
       <a href="../index.html#my-mom">My Mom</a>
     </div>
   </nav>
@@ -148,6 +159,7 @@ PAGE = """<!DOCTYPE html>
         <p class="art-price">{price}</p>
         <p class="art-blurb">{blurb}</p>
         {cta}
+        {print_cta}
         <p class="art-note">One of a kind. Signed by the artist. Ships from the North Dallas studio &mdash; local pickup and delivery welcome.</p>
       </div>
     </div>
@@ -197,6 +209,7 @@ def build_pages():
                 meta_desc=html.escape(desc),
                 price=price_label(w),
                 cta=cta(w),
+                print_cta=print_cta(w),
                 blurb=BLURB,
                 ld=jsonld(w),
                 crumbs=breadcrumbs(w),
@@ -287,6 +300,7 @@ SHOP = """<!DOCTYPE html>
     <div class="nav-links">
       <a href="../index.html#gallery">Gallery</a>
       <a href="index.html">Collect</a>
+      <a href="https://my-moms-art.printify.me/" target="_blank" rel="noopener">Prints</a>
       <a href="../index.html#my-mom">My Mom</a>
     </div>
   </nav>
