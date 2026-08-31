@@ -70,7 +70,7 @@
       "year": 2023,
       "price": 325,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/4gM3cwgFObFidTnb8udby00"
     },
     {
       "index": 4,
@@ -237,7 +237,7 @@
       "year": 2023,
       "price": 325,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/14A5kEahq9xa8z3foKdby01"
     },
     {
       "index": 18,
@@ -249,7 +249,7 @@
       "year": 2022,
       "price": 525,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/7sYeVe2OY38Mg1v2BYdby02"
     },
     {
       "index": 19,
@@ -261,7 +261,7 @@
       "year": 2023,
       "price": 1600,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/bJe5kE0GQ10EaHbekGdby03"
     },
     {
       "index": 20,
@@ -273,7 +273,7 @@
       "year": 2023,
       "price": 1600,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/cNibJ2gFO7p26qVa4qdby04"
     },
     {
       "index": 21,
@@ -285,7 +285,7 @@
       "year": 2023,
       "price": 975,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/8x228sahq7p25mR4K6dby05"
     },
     {
       "index": 22,
@@ -333,7 +333,7 @@
       "year": null,
       "price": 1600,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/eVq14oexG8t67uZdgCdby06"
     },
     {
       "index": 26,
@@ -345,7 +345,7 @@
       "year": null,
       "price": 1600,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/3cI14o4X66kY6qV7Widby07"
     },
     {
       "index": 27,
@@ -357,7 +357,7 @@
       "year": null,
       "price": 1600,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/fZu4gAahq8t68z37Widby08"
     },
     {
       "index": 28,
@@ -369,7 +369,7 @@
       "year": 2023,
       "price": 325,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/9B6cN661a5gU8z3foKdby09"
     },
     {
       "index": 29,
@@ -393,7 +393,7 @@
       "year": null,
       "price": 975,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/5kQbJ2dtC9xacPj3G2dby0a"
     },
     {
       "index": 31,
@@ -600,7 +600,7 @@
       "year": null,
       "price": 1600,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/7sY3cwdtCbFibLf90mdby0b"
     },
     {
       "index": 47,
@@ -612,7 +612,7 @@
       "year": 2023,
       "price": 650,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/8x214o3T224Ig1v1xUdby0c"
     },
     {
       "index": 48,
@@ -624,7 +624,7 @@
       "year": 2023,
       "price": 325,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/5kQbJ22OY7p2bLf4K6dby0d"
     },
     {
       "index": 49,
@@ -636,7 +636,7 @@
       "year": 2023,
       "price": 650,
       "status": "available",
-      "checkoutUrl": ""
+      "checkoutUrl": "https://buy.stripe.com/dRm14o4X6aBeeXr7Widby0e"
     }
   ]
 }
