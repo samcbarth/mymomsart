@@ -10,7 +10,7 @@
   },
   "pricing": {
     "_method": "Flat rate card by canvas size: 60x48 $4800, 48x36 $2925, 40x30 $1950, 30x30 $1575, 20x26 $975.",
-    "printsEnabled": false,
+    "printsEnabled": true,
     "_printsNote": "Originals photographed at ~2600x3500. Good for prints up to roughly 12x16 in at 300 DPI or 18x24 in at 150 DPI. Larger sizes need professional photography of the paintings.",
     "sizeTable": {
       "60x48": 4800,
