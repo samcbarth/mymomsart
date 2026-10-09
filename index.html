@@ -32,6 +32,7 @@
       <a href="#gallery">Gallery</a>
       <a href="art/index.html">Collect</a>
       <a href="https://my-moms-art.printify.me/" target="_blank" rel="noopener">Prints</a>
+      <a href="#commissions">Commissions</a>
       <a href="#my-mom">My Mom</a>
       <a href="#about">About</a>
       <a href="https://www.instagram.com/basilartwork" target="_blank" rel="noopener" class="nav-ig">
@@ -44,7 +45,7 @@
   <header class="hero">
     <p class="hero-eyebrow">Original paintings</p>
     <h1>Art that <em>blooms.</em></h1>
-    <p class="hero-sub">by Basil &mdash; abstract florals &amp; expressive works</p>
+    <p class="hero-sub">by Basil, abstract florals &amp; expressive works</p>
     <a href="#gallery" class="hero-cta">View the collection</a>
   </header>
 
@@ -573,12 +574,39 @@
 
 
 
+    <!-- inquiry:start -->
+    <section id="commissions">
+      <div class="inquiry-inner" id="inquire-home">
+        <p class="section-eyebrow">Commissions and projects</p><h2>Something made<br>for your space.</h2><p class="iq-intro">Lisa takes commissions, paints murals and large installs, and teaches classes and workshops. Tell her what you have in mind and she will reply by email.</p>
+        <form class="inquiry-form" data-inquiry-type="commission" data-artwork="" novalidate>
+          <div class="iq-row">
+            <label>Your name<input type="text" name="name" autocomplete="name" required /></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          </div>
+          <div class="iq-row">
+            <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel" /></label>
+            <label>City<input type="text" name="location" autocomplete="address-level2" /></label>
+          </div>
+          <div class="iq-row">
+            <label>I am interested in<select name="type"><option value="commission">A commission</option><option value="mural">A mural or large install</option><option value="class">A class or workshop</option><option value="original">Buying an original</option><option value="trade">A designer or business project</option><option value="other">Something else</option></select></label>
+            <label>Budget range<select name="budget"><option value="">Choose one</option><option value="under_500">Under $500</option><option value="500_1500">$500 to $1,500</option><option value="1500_3000">$1,500 to $3,000</option><option value="3000_6000">$3,000 to $6,000</option><option value="6000_plus">$6,000+</option><option value="not_sure">Not sure yet</option></select></label>
+          </div>
+          <label>Timeline<input type="text" name="timeline" placeholder="For example: before the holidays" /></label>
+          <label>Tell Lisa about your project<textarea name="details" rows="4"></textarea></label>
+          <input type="text" name="website" class="iq-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="buy-btn">Send inquiry</button>
+          <p class="iq-note" role="status" aria-live="polite">Lisa will reply to you by email.</p>
+        </form>
+      </div>
+    </section>
+    <!-- inquiry:end -->
+
     <section id="prints">
       <div class="prints-inner">
         <p class="section-eyebrow">Prints</p>
         <h2>Her work, at a size<br>that fits your wall.</h2>
-        <p>Not everyone has room for a five-foot canvas. Every painting here is also available as a giclee fine art print on matte archival paper &mdash; the same image, printed and shipped for you.</p>
-        <a href="https://my-moms-art.printify.me/" target="_blank" rel="noopener" class="pill-btn">Browse prints &mdash; from $45</a>
+        <p>Not everyone has room for a five-foot canvas. Every painting here is also available as a giclee fine art print on matte archival paper. The same image, printed and shipped for you.</p>
+        <a href="https://my-moms-art.printify.me/" target="_blank" rel="noopener" class="pill-btn">Browse prints, from $45</a>
       </div>
     </section>
 
@@ -586,7 +614,7 @@
       <div class="news-inner">
         <p class="section-eyebrow">Stay close to the studio</p>
         <h2>First look at new work.</h2>
-        <p>New paintings go to this list before they go anywhere else &mdash; plus studio tour dates and the occasional look at what is still wet on the easel.</p>
+        <p>New paintings go to this list before they go anywhere else, plus studio tour dates and the occasional look at what is still wet on the easel.</p>
         <form class="news-form" id="news-form">
           <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address" />
           <button type="submit">Join the list</button>
@@ -659,6 +687,7 @@
   </script>
 
   <script src="script.js"></script>
+  <script src="inquiry.js"></script>
 
 
   <!-- HubSpot tracking: page analytics, and ties form submissions to the

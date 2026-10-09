@@ -178,7 +178,7 @@ function show(i) {
   const slug   = card.dataset.slug;
   const price  = card.dataset.price;
   const status = card.dataset.status;
-  lbBuy.href = slug ? `art/${slug}.html` : 'art/index.html';
+  lbBuy.href = slug ? `art/${slug}.html${!price && status !== 'sold' ? '#inquire' : ''}` : 'art/index.html';
   if (status === 'sold')     lbBuyTxt.textContent = 'Sold: see available work';
   else if (price)            lbBuyTxt.textContent = `$${Number(price).toLocaleString()}: view & purchase`;
   else                       lbBuyTxt.textContent = 'Inquire about this piece';

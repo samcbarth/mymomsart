@@ -62,20 +62,93 @@ def print_cta(w):
         return ""
     return (
         f'<a class="print-btn" href="{html.escape(w["printUrl"])}" target="_blank" rel="noopener">'
-        f"Or buy a fine art print &mdash; from $45</a>"
+        f"Or buy a fine art print, from $45</a>"
+    )
+
+
+INQUIRY_TYPES = [
+    ("commission", "A commission"),
+    ("mural", "A mural or large install"),
+    ("class", "A class or workshop"),
+    ("original", "Buying an original"),
+    ("trade", "A designer or business project"),
+    ("other", "Something else"),
+]
+INQUIRY_BUDGETS = [
+    ("under_500", "Under $500"),
+    ("500_1500", "$500 to $1,500"),
+    ("1500_3000", "$1,500 to $3,000"),
+    ("3000_6000", "$3,000 to $6,000"),
+    ("6000_plus", "$6,000+"),
+    ("not_sure", "Not sure yet"),
+]
+
+
+def inquiry_form(kind, artwork="", ident="inquire", eyebrow="", heading="", intro=""):
+    """Shared inquiry form. inquiry.js posts it to the HubSpot 'Basil Inquiry' form."""
+    types = "".join(f'<option value="{v}">{l}</option>' for v, l in INQUIRY_TYPES)
+    budgets = '<option value="">Choose one</option>' + "".join(
+        f'<option value="{v}">{l}</option>' for v, l in INQUIRY_BUDGETS
+    )
+    head = ""
+    if eyebrow:
+        head += f'<p class="section-eyebrow">{eyebrow}</p>'
+    if heading:
+        head += f"<h2>{heading}</h2>"
+    if intro:
+        head += f'<p class="iq-intro">{intro}</p>'
+    return f"""<div class="inquiry-inner" id="{ident}">
+        {head}
+        <form class="inquiry-form" data-inquiry-type="{kind}" data-artwork="{html.escape(artwork)}" novalidate>
+          <div class="iq-row">
+            <label>Your name<input type="text" name="name" autocomplete="name" required /></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          </div>
+          <div class="iq-row">
+            <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel" /></label>
+            <label>City<input type="text" name="location" autocomplete="address-level2" /></label>
+          </div>
+          <div class="iq-row">
+            <label>I am interested in<select name="type">{types}</select></label>
+            <label>Budget range<select name="budget">{budgets}</select></label>
+          </div>
+          <label>Timeline<input type="text" name="timeline" placeholder="For example: before the holidays" /></label>
+          <label>Tell Lisa about your project<textarea name="details" rows="4"></textarea></label>
+          <input type="text" name="website" class="iq-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="buy-btn">Send inquiry</button>
+          <p class="iq-note" role="status" aria-live="polite">Lisa will reply to you by email.</p>
+        </form>
+      </div>"""
+
+
+def inquiry_page_form(w):
+    title = html.escape(w["title"])
+    if w["status"] == "sold":
+        return inquiry_form(
+            "commission", w["slug"], eyebrow="Like this one?",
+            heading="Ask for something in its spirit.",
+            intro=f"{title} has found its home. Lisa takes commissions, so tell her what you have in mind.",
+        )
+    if w["checkoutUrl"]:
+        return inquiry_form(
+            "original", w["slug"], eyebrow="Questions?",
+            heading="Ask about this painting.",
+            intro="Ask about condition, framing, shipping, or a custom size. Or tell Lisa about a commission.",
+        )
+    return inquiry_form(
+        "original", w["slug"], eyebrow="Inquire",
+        heading=f"Ask about {title}.",
+        intro="Lisa will send size, price and shipping details. Or tell her about a commission you have in mind.",
     )
 
 
 def cta(w):
-    """Buy button when a Stripe link exists, otherwise an inquiry mailto."""
+    """Buy button when a Stripe link exists, otherwise a jump to the inquiry form."""
     if w["status"] == "sold":
         return '<span class="buy-btn buy-btn--sold">Sold</span>'
     if w["checkoutUrl"]:
-        return f'<a class="buy-btn" href="{html.escape(w["checkoutUrl"])}">Purchase &mdash; {price_label(w)}</a>'
-    subj = f'Inquiry: {w["title"]}'
-    body = f'Hi Lisa, I am interested in {w["title"]}. Is it still available?'
-    href = f'mailto:{ARTIST["email"]}?subject={subj}&body={body}'.replace(" ", "%20")
-    return f'<a class="buy-btn" href="{html.escape(href)}">Inquire about this piece</a>'
+        return f'<a class="buy-btn" href="{html.escape(w["checkoutUrl"])}">Purchase: {price_label(w)}</a>'
+    return '<a class="buy-btn" href="#inquire">Inquire about this piece</a>'
 
 
 def jsonld(w):
@@ -117,12 +190,12 @@ PAGE = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title} &mdash; Original Painting by Lisa Barth | Basil Artwork</title>
+  <title>{title}: Original Painting by Lisa Barth | Basil Artwork</title>
   <meta name="description" content="{meta_desc}" />
   <link rel="canonical" href="{base}/art/{slug}.html" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta property="og:type" content="product" />
-  <meta property="og:title" content="{title} &mdash; original painting by Lisa Barth" />
+  <meta property="og:title" content="{title}, original painting by Lisa Barth" />
   <meta property="og:description" content="{meta_desc}" />
   <meta property="og:image" content="{base}/photos/artwork-{img}.jpg" />
   <meta property="og:url" content="{base}/art/{slug}.html" />
@@ -142,6 +215,7 @@ PAGE = """<!DOCTYPE html>
       <a href="../index.html#gallery">Gallery</a>
       <a href="index.html">Collect</a>
       <a href="https://my-moms-art.printify.me/" target="_blank" rel="noopener">Prints</a>
+      <a href="../index.html#commissions">Commissions</a>
       <a href="../index.html#my-mom">My Mom</a>
     </div>
   </nav>
@@ -161,9 +235,12 @@ PAGE = """<!DOCTYPE html>
         <p class="art-blurb art-blurb--process">{blurb}</p>
         {cta}
         {print_cta}
-        <p class="art-note">One of a kind. Signed by the artist. Ships from the North Dallas studio &mdash; local pickup and delivery welcome.</p>
+        <p class="art-note">One of a kind. Signed by the artist. Ships from the North Dallas studio. Local pickup and delivery welcome.</p>
       </div>
     </div>
+    <section class="inquiry-section">
+      {inquiry}
+    </section>
   </main>
 
   <footer>
@@ -174,6 +251,7 @@ PAGE = """<!DOCTYPE html>
     </div>
   </footer>
 
+  <script src="../inquiry.js"></script>
   <!-- HubSpot tracking: page analytics, and ties form submissions to the
        pages someone browsed before signing up. -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/20693956.js"></script>
@@ -185,7 +263,7 @@ PAGE = """<!DOCTYPE html>
 BLURB = (
     "An original acrylic work by Lisa Barth, built up in poured and layered colour and then "
     "scraped back to reveal what sits underneath. Her florals are not copies of anything in "
-    "nature &mdash; they are composites of many forms, fused into something familiar and "
+    "nature. They are composites of many forms, fused into something familiar and "
     "entirely her own. Painted by hand in a North Dallas studio."
 )
 
@@ -211,6 +289,7 @@ def build_pages():
                 price=price_label(w),
                 cta=cta(w),
                 print_cta=print_cta(w),
+                inquiry=inquiry_page_form(w),
                 blurb=BLURB,
                 note=w.get("note", ""),
                 ld=jsonld(w),
@@ -283,11 +362,11 @@ SHOP = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Collect Original Paintings &mdash; Basil Artwork by Lisa Barth</title>
+  <title>Collect Original Paintings: Basil Artwork by Lisa Barth</title>
   <meta name="description" content="Original abstract floral paintings by Dallas artist Lisa Barth, available to collect direct from the studio. Each piece is one of a kind." />
   <link rel="canonical" href="{base}/art/" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta property="og:title" content="Collect Original Paintings &mdash; Basil Artwork" />
+  <meta property="og:title" content="Collect Original Paintings: Basil Artwork" />
   <meta property="og:description" content="Original abstract florals by Lisa Barth, direct from a North Dallas studio." />
   <meta property="og:image" content="{base}/photos/artwork-21.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -310,7 +389,7 @@ SHOP = """<!DOCTYPE html>
   <header class="shop-hero">
     <p class="section-eyebrow">Available work</p>
     <h1>Take one home.</h1>
-    <p class="shop-hero-sub">Every painting here is an original &mdash; one of a kind, signed, and sold directly by the artist. Most are also available as fine art prints.</p>
+    <p class="shop-hero-sub">Every painting here is an original: one of a kind, signed, and sold directly by the artist. Most are also available as fine art prints.</p>
   </header>
 
   <main>
@@ -335,6 +414,23 @@ SHOP = """<!DOCTYPE html>
 </body>
 </html>
 """
+
+
+def build_home_inquiry():
+    """Regenerate the home-page commissions form between its markers."""
+    index = ROOT / "index.html"
+    s = index.read_text(encoding="utf-8")
+    start_tag, end_tag = "<!-- inquiry:start -->", "<!-- inquiry:end -->"
+    form = inquiry_form(
+        "commission", ident="inquire-home", eyebrow="Commissions and projects",
+        heading="Something made<br>for your space.",
+        intro="Lisa takes commissions, paints murals and large installs, and teaches classes and workshops. Tell her what you have in mind and she will reply by email.",
+    )
+    block = f"{start_tag}\n    <section id=\"commissions\">\n      {form}\n    </section>\n    {end_tag}"
+    a = s.index(start_tag)
+    z = s.index(end_tag) + len(end_tag)
+    index.write_text(s[:a] + block + s[z:], encoding="utf-8")
+    print("rebuilt home inquiry form")
 
 
 def build_shop():
@@ -377,5 +473,6 @@ def build_sitemap():
 if __name__ == "__main__":
     build_pages()
     build_gallery()
+    build_home_inquiry()
     build_shop()
     build_sitemap()

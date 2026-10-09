@@ -1025,3 +1025,96 @@ footer a:hover { color: var(--black); }
   color: var(--gray);
   opacity: 0.85;
 }
+
+
+/* ── Inquiry form ─────────────────────── */
+#commissions {
+  background: var(--light);
+  padding: 5rem 2rem;
+}
+
+.inquiry-section {
+  max-width: 1100px;
+  margin: 3.5rem auto 0;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.inquiry-inner { max-width: 640px; margin: 0 auto; text-align: left; }
+
+.inquiry-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 0.4rem 0 0.9rem;
+}
+
+.iq-intro {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-weight: 300;
+  margin-bottom: 1.8rem;
+}
+
+.inquiry-form { display: grid; gap: 1rem; }
+
+.iq-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.inquiry-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--gray);
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--black);
+  background: var(--white);
+}
+
+.inquiry-form textarea { border-radius: 18px; resize: vertical; }
+
+.inquiry-form input:focus,
+.inquiry-form select:focus,
+.inquiry-form textarea:focus {
+  outline: none;
+  border-color: var(--black);
+}
+
+.inquiry-form .buy-btn { justify-self: start; border: none; cursor: pointer; }
+.inquiry-form .buy-btn:disabled { opacity: 0.6; cursor: default; }
+
+.iq-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+.iq-note { font-size: 0.78rem; color: var(--gray); margin: 0; }
+
+@media (max-width: 820px) {
+  #commissions { padding: 4rem 1.25rem; }
+  .iq-row { grid-template-columns: 1fr; }
+}
+
+/* Small screens: keep every nav link reachable instead of clipping them. */
+@media (max-width: 820px) {
+  .nav-logo { white-space: nowrap; }
+  .nav-links {
+    flex: 1;
+    min-width: 0;
+    gap: 1.1rem;
+    margin-left: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { white-space: nowrap; }
+}
