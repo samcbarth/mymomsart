@@ -767,5 +767,117 @@
       "printUrl": "https://my-moms-art.printify.me/product/31483721",
       "note": "Water lilies over blue-green depth, gold catching in the surface."
     }
+  ],
+  "services": [
+    {
+      "slug": "commissions",
+      "label": "Commissions",
+      "kind": "commission",
+      "title": "Commission a Painting from Lisa Barth | Basil Artwork, Dallas",
+      "meta": "Commission an original abstract floral painting from Dallas artist Lisa Barth. Tell her about the room, the size and the colors, and she will reply by email.",
+      "eyebrow": "Commissions",
+      "h1": "Commission a painting from my mom.",
+      "paras": [
+        "My mom, Lisa Barth, takes commissions. She paints abstract florals in acrylic and ink, and a commission starts with a conversation about the space the painting is for.",
+        {
+          "sam": "Her art is very pretty and floral. It's nice to look at and brightens up a space."
+        },
+        "Tell her about the room, the size you have in mind and the colors you like. Photos of the space help. She will reply by email, and a deposit is paid up front before she starts. You do not have to live in Dallas. She ships finished work.",
+        "The originals on this site run from 20 by 26 inches up to 60 by 48."
+      ],
+      "examples_heading": "Recent paintings",
+      "examples": [
+        "secret-garden",
+        "blue-hibiscus",
+        "geranium",
+        "water-garden",
+        "mona",
+        "quiet-daisy"
+      ],
+      "form_heading": "Tell Lisa what you have in mind."
+    },
+    {
+      "slug": "murals",
+      "label": "Murals",
+      "kind": "mural",
+      "title": "Murals and Large Installs by Lisa Barth | Basil Artwork, Dallas",
+      "meta": "Murals and large painted installs by Dallas artist Lisa Barth, for homes and businesses. Large canvases from 60 by 48 inches.",
+      "eyebrow": "Murals and large installs",
+      "h1": "Murals and large installs.",
+      "paras": [
+        "My mom has painted walls in homes and in businesses, and she paints large canvases, 60 by 48 inches and up.",
+        "A wall is a different job from a canvas. Tell her where it is, how big it is, and what the room is used for. Photos of the wall help. She will reply by email."
+      ],
+      "examples_heading": "Large canvases, 60 by 48",
+      "examples": [
+        "rubys-garden",
+        "secret-garden",
+        "pegasus",
+        "in-flight",
+        "blue-hibiscus",
+        "ransomed-butterfly"
+      ],
+      "form_heading": "Tell Lisa about the space."
+    },
+    {
+      "slug": "classes",
+      "label": "Classes",
+      "kind": "class",
+      "title": "Painting Classes and Workshops with Lisa Barth | Basil Artwork, Dallas",
+      "meta": "Group workshops, private lessons and painting parties with Dallas artist Lisa Barth.",
+      "eyebrow": "Classes and workshops",
+      "h1": "Painting classes with my mom.",
+      "paras": [
+        "She teaches group workshops, private lessons and painting parties.",
+        "Tell her who it is for, how many people, and roughly when. She will reply by email with what works."
+      ],
+      "examples": [],
+      "form_heading": "Tell Lisa what you are planning."
+    },
+    {
+      "slug": "designers",
+      "label": "Designers",
+      "kind": "trade",
+      "title": "Art for Designers, Stagers and Businesses | Basil Artwork by Lisa Barth",
+      "meta": "Originals, commissions, murals and prints from Dallas artist Lisa Barth for interior designers, stagers and businesses.",
+      "eyebrow": "For designers and businesses",
+      "h1": "Art for designers, stagers and businesses.",
+      "paras": [
+        "If you place art for clients, send her the size, the palette and the deadline. Originals, commissions, murals and prints all go through the same inquiry, so one message covers it."
+      ],
+      "examples_heading": "Originals",
+      "examples": [
+        "rubys-garden",
+        "pegasus",
+        "mona",
+        "geranium",
+        "shout",
+        "water-garden"
+      ],
+      "form_heading": "Send Lisa the details."
+    },
+    {
+      "slug": "about",
+      "label": "About",
+      "kind": "other",
+      "title": "About Lisa Barth | Basil Artwork, North Dallas Painter",
+      "meta": "Lisa Barth paints abstract florals in acrylic and ink from a North Dallas studio. Featured artist in the North Dallas Artist Studio Tour.",
+      "eyebrow": "About",
+      "h1": "Lisa Barth.",
+      "about": true,
+      "paras": [
+        "My mom has painted her whole life, not as a career, but as a calling. Growing up in North Dallas, her earliest memories are of gardens: gathering wildflowers with her mother and grandmother, sitting in the branches of Mimosa trees, foraging seeds and native Texas plants. Those bright greens and pinks, blues and yellows swirl through everything she creates.",
+        "She works in acrylic paint and ink on canvas and synthetic papers, layering lavishly, pouring and moving fluidly, then scraping back to reveal what's underneath. Her florals aren't copies of anything in nature. They're watery reflections of flowers not yet visible: a composite of many forms that fuse into something familiar yet entirely her own.",
+        "Her paintings are bold, colorful, free, and flowing, designed to bring a sense of calm, quiet energy and the kind of joy you feel when you're outside and everything is in bloom.",
+        "Each painting begins in movement: acrylic poured, pushed, and layered until something emerges from beneath. Bold in colour, free in form, and quietly full of feeling. Every piece is an original, made by hand in a North Dallas studio.",
+        {
+          "link": "Lisa is a featured artist in the annual North Dallas Artist Studio Tour, an open-studio event where collectors and art lovers visit working artists in their spaces, see works in progress, and connect directly with the people behind the paintings.",
+          "href": "https://northdallasart.com/lisa-barth/",
+          "text": "See her listing"
+        }
+      ],
+      "examples": [],
+      "form_heading": "Get in touch with Lisa."
+    }
   ]
 }

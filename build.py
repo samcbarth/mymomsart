@@ -215,7 +215,7 @@ PAGE = """<!DOCTYPE html>
       <a href="../index.html#gallery">Gallery</a>
       <a href="index.html">Collect</a>
       <a href="https://my-moms-art.printify.me/" target="_blank" rel="noopener">Prints</a>
-      <a href="../index.html#commissions">Commissions</a>
+      <a href="../commissions/">Commissions</a>
       <a href="../index.html#my-mom">My Mom</a>
     </div>
   </nav>
@@ -236,6 +236,7 @@ PAGE = """<!DOCTYPE html>
         {cta}
         {print_cta}
         <p class="art-note">One of a kind. Signed by the artist. Ships from the North Dallas studio. Local pickup and delivery welcome.</p>
+        <p class="art-note"><a href="../commissions/">Want something like this, sized for your wall? Commission one.</a></p>
       </div>
     </div>
     <section class="inquiry-section">
@@ -245,6 +246,7 @@ PAGE = """<!DOCTYPE html>
 
   <footer>
     <span>&copy; 2026 Basil Artwork</span>
+{footer_links}
     <div class="footer-contact">
       <a href="mailto:{email}">{email}</a>
       <a href="{ig}" target="_blank" rel="noopener">@basilartwork</a>
@@ -266,6 +268,180 @@ BLURB = (
     "nature. They are composites of many forms, fused into something familiar and "
     "entirely her own. Painted by hand in a North Dallas studio."
 )
+
+
+SERVICES = CAT.get("services", [])
+
+FOOTER_LINKS = """    <nav class="footer-links" aria-label="Services">
+      {links}
+    </nav>"""
+
+
+def footer_links(prefix):
+    """Footer links to every service page. prefix is the path back to the site root."""
+    return "".join(f'<a href="{prefix}{s["slug"]}/">{s["label"]}</a>' for s in SERVICES)
+
+
+SERVICE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content="{meta}" />
+  <link rel="canonical" href="{base}/{slug}/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{title}" />
+  <meta property="og:description" content="{meta}" />
+  <meta property="og:image" content="{base}/photos/artwork-21.jpg" />
+  <meta property="og:url" content="{base}/{slug}/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script type="application/ld+json">{ld}</script>
+</head>
+<body class="art-page">
+
+  <nav id="nav">
+    <a class="nav-logo" href="../index.html">Basil Artwork</a>
+    <div class="nav-links">
+      <a href="../index.html#gallery">Gallery</a>
+      <a href="../art/index.html">Collect</a>
+      <a href="https://my-moms-art.printify.me/" target="_blank" rel="noopener">Prints</a>
+      <a href="../commissions/">Commissions</a>
+      <a href="../index.html#my-mom">My Mom</a>
+    </div>
+  </nav>
+
+  <header class="shop-hero">
+    <p class="section-eyebrow">{eyebrow}</p>
+    <h1>{h1}</h1>
+  </header>
+
+  <main>
+    <section class="svc-body">
+{paras}
+    </section>
+{examples}
+    <section class="inquiry-section">
+      {inquiry}
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Basil Artwork</span>
+{footer_links}
+    <div class="footer-contact">
+      <a href="mailto:{email}">{email}</a>
+      <a href="{ig}" target="_blank" rel="noopener">@basilartwork</a>
+    </div>
+  </footer>
+
+  <script src="../inquiry.js"></script>
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/20693956.js"></script>
+
+</body>
+</html>
+"""
+
+
+def service_ld(s):
+    data = {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage" if s.get("about") else "Service",
+        "name": s["h1"],
+        "url": f'{BASE}/{s["slug"]}/',
+        "description": s["meta"],
+    }
+    person = {
+        "@type": "Person",
+        "name": ARTIST["name"],
+        "alternateName": ARTIST["brand"],
+        "url": BASE,
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dallas",
+            "addressRegion": "TX",
+            "addressCountry": "US",
+        },
+        "sameAs": [ARTIST["instagram"], "https://northdallasart.com/lisa-barth/"],
+    }
+    if s.get("about"):
+        data["mainEntity"] = person
+    else:
+        data["provider"] = person
+        data["serviceType"] = s["label"]
+    return json.dumps(data, indent=2)
+
+
+def service_paras(s):
+    out = []
+    for p in s["paras"]:
+        if isinstance(p, str):
+            out.append(f"      <p>{html.escape(p)}</p>")
+        elif "sam" in p:
+            out.append(f'      <p class="svc-line">{html.escape(p["sam"])}</p>')
+        else:
+            out.append(
+                f'      <p>{html.escape(p["link"])}</p>\n'
+                f'      <p><a class="tour-btn" href="{html.escape(p["href"])}" target="_blank" rel="noopener">{html.escape(p["text"])}</a></p>'
+            )
+    return "\n".join(out)
+
+
+def service_examples(s):
+    if not s["examples"]:
+        return ""
+    by_slug = {w["slug"]: w for w in WORKS}
+    cards = []
+    for slug in s["examples"]:
+        w = by_slug[slug]
+        tw, th = pixels(w["index"], thumb=True)
+        cards.append(
+            f'''        <a class="shop-card" href="../art/{slug}.html">
+          <div class="img-wrap"><img src="../photos/thumbs/artwork-{w["index"] + 1}.jpg" width="{tw}" height="{th}" alt="{html.escape(w["title"])} by Lisa Barth" loading="lazy" /></div>
+          <div class="shop-card-info"><h3>{html.escape(w["title"])}</h3><p>{subtitle(w)}</p></div>
+        </a>'''
+        )
+    return (
+        f'''    <section class="shop-grid-wrap svc-examples">
+      <h2 class="svc-h2">{html.escape(s.get("examples_heading", "Paintings"))}</h2>
+      <div class="shop-grid">
+{chr(10).join(cards)}
+      </div>
+    </section>'''
+    )
+
+
+def build_services():
+    for s in SERVICES:
+        d = ROOT / s["slug"]
+        d.mkdir(exist_ok=True)
+        (d / "index.html").write_text(
+            SERVICE.format(
+                title=html.escape(s["title"]),
+                meta=html.escape(s["meta"]),
+                slug=s["slug"],
+                base=BASE,
+                ld=service_ld(s),
+                eyebrow=html.escape(s["eyebrow"]),
+                h1=html.escape(s["h1"]),
+                paras=service_paras(s),
+                examples=service_examples(s),
+                inquiry=inquiry_form(
+                    s["kind"], ident="inquire", heading=html.escape(s["form_heading"]),
+                    intro="Lisa will reply to you by email.",
+                ),
+                footer_links=FOOTER_LINKS.format(links=footer_links("../")),
+                email=ARTIST["email"],
+                ig=ARTIST["instagram"],
+            ),
+            encoding="utf-8",
+        )
+    print(f"built {len(SERVICES)} service pages")
 
 
 def build_pages():
@@ -299,6 +475,7 @@ def build_pages():
                 base=BASE,
                 email=ARTIST["email"],
                 ig=ARTIST["instagram"],
+                footer_links=FOOTER_LINKS.format(links=footer_links("../")),
             ),
             encoding="utf-8",
         )
@@ -382,6 +559,7 @@ SHOP = """<!DOCTYPE html>
       <a href="../index.html#gallery">Gallery</a>
       <a href="index.html">Collect</a>
       <a href="https://my-moms-art.printify.me/" target="_blank" rel="noopener">Prints</a>
+      <a href="../commissions/">Commissions</a>
       <a href="../index.html#my-mom">My Mom</a>
     </div>
   </nav>
@@ -401,6 +579,7 @@ SHOP = """<!DOCTYPE html>
 
   <footer>
     <span>&copy; 2026 Basil Artwork</span>
+{footer_links}
     <div class="footer-contact">
       <a href="mailto:{email}">{email}</a>
       <a href="{ig}" target="_blank" rel="noopener">@basilartwork</a>
@@ -448,14 +627,14 @@ def build_shop():
         for w in WORKS
     )
     (ROOT / "art" / "index.html").write_text(
-        SHOP.format(cards=cards, base=BASE, email=ARTIST["email"], ig=ARTIST["instagram"]),
+        SHOP.format(cards=cards, base=BASE, email=ARTIST["email"], ig=ARTIST["instagram"], footer_links=FOOTER_LINKS.format(links=footer_links("../"))),
         encoding="utf-8",
     )
     print("built shop index")
 
 
 def build_sitemap():
-    urls = [f"{BASE}/", f"{BASE}/art/"] + [f'{BASE}/art/{w["slug"]}.html' for w in WORKS]
+    urls = [f"{BASE}/", f"{BASE}/art/"] + [f'{BASE}/{s["slug"]}/' for s in SERVICES] + [f'{BASE}/art/{w["slug"]}.html' for w in WORKS]
     body = "\n".join(f"  <url><loc>{u}</loc></url>" for u in urls)
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -472,6 +651,7 @@ def build_sitemap():
 
 if __name__ == "__main__":
     build_pages()
+    build_services()
     build_gallery()
     build_home_inquiry()
     build_shop()
