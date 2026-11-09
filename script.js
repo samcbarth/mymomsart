@@ -178,9 +178,9 @@ function show(i) {
   const slug   = card.dataset.slug;
   const price  = card.dataset.price;
   const status = card.dataset.status;
-  lbBuy.href = slug ? `art/${slug}.html` : 'art/index.html';
-  if (status === 'sold')     lbBuyTxt.textContent = 'Sold — see available work';
-  else if (price)            lbBuyTxt.textContent = `$${Number(price).toLocaleString()} — view & purchase`;
+  lbBuy.href = slug ? `art/${slug}.html${!price && status !== 'sold' ? '#inquire' : ''}` : 'art/index.html';
+  if (status === 'sold')     lbBuyTxt.textContent = 'Sold: see available work';
+  else if (price)            lbBuyTxt.textContent = `$${Number(price).toLocaleString()}: view & purchase`;
   else                       lbBuyTxt.textContent = 'Inquire about this piece';
 
   updateLikeBtn();
@@ -258,7 +258,7 @@ if (newsForm) {
       newsForm.reset();
       note.textContent = 'You are on the list. Talk soon.';
     } catch {
-      note.textContent = 'That did not go through — email pljbarth@gmail.com and we will add you.';
+      note.textContent = 'That did not go through. Email pljbarth@gmail.com and we will add you.';
     } finally {
       btn.disabled = false;
     }

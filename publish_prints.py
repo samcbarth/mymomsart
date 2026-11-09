@@ -10,7 +10,7 @@ Reads PRINTIFY_TOKEN from the environment.
 import json, os, pathlib, sys, time, urllib.request
 
 ROOT = pathlib.Path(__file__).parent
-CATALOG = ROOT / "mymomsart" / "artworks.json"
+CATALOG = ROOT / "artworks.json"
 API = "https://api.printify.com/v1"
 SHOP = 28768076
 
