@@ -12,6 +12,13 @@ Re-run after any edit to artworks.json:  python build.py
 import json, html, pathlib
 from PIL import Image
 
+GTM = '''<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KMS4X55L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>'''
+
 ROOT = pathlib.Path(__file__).parent
 CAT = json.loads((ROOT / "artworks.json").read_text(encoding="utf-8"))
 ARTIST = CAT["artist"]
@@ -188,6 +195,7 @@ def jsonld(w):
 PAGE = """<!DOCTYPE html>
 <html lang="en">
 <head>
+{gtm}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}: Original Painting by Lisa Barth | Basil Artwork</title>
@@ -285,6 +293,7 @@ def footer_links(prefix):
 SERVICE = """<!DOCTYPE html>
 <html lang="en">
 <head>
+{gtm}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
@@ -421,7 +430,7 @@ def build_services():
         d = ROOT / s["slug"]
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(
-            SERVICE.format(
+            SERVICE.format(gtm=GTM, 
                 title=html.escape(s["title"]),
                 meta=html.escape(s["meta"]),
                 slug=s["slug"],
@@ -455,7 +464,7 @@ def build_pages():
             + f' by Dallas artist Lisa Barth. {w.get("note", "")} {price_label(w)}.'
         )
         (out / f'{w["slug"]}.html').write_text(
-            PAGE.format(
+            PAGE.format(gtm=GTM, 
                 title=html.escape(w["title"]),
                 slug=w["slug"],
                 img=w["index"] + 1,
@@ -537,6 +546,7 @@ SHOP_CARD = """        <a class="shop-card{sold}" href="{slug}.html">
 SHOP = """<!DOCTYPE html>
 <html lang="en">
 <head>
+{gtm}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collect Original Paintings: Basil Artwork by Lisa Barth</title>
@@ -627,7 +637,7 @@ def build_shop():
         for w in WORKS
     )
     (ROOT / "art" / "index.html").write_text(
-        SHOP.format(cards=cards, base=BASE, email=ARTIST["email"], ig=ARTIST["instagram"], footer_links=FOOTER_LINKS.format(links=footer_links("../"))),
+        SHOP.format(gtm=GTM, cards=cards, base=BASE, email=ARTIST["email"], ig=ARTIST["instagram"], footer_links=FOOTER_LINKS.format(links=footer_links("../"))),
         encoding="utf-8",
     )
     print("built shop index")
